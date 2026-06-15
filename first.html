@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Destinations | ASIKEL VOYAGES</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#001b3c",
+                        "secondary-fixed": "#ffdea5",
+                        "on-secondary-container": "#785a1a",
+                        "error": "#ba1a1a",
+                        "on-background": "#1c1c1a",
+                        "sand-beige": "#E7DBB4",
+                        "primary-fixed": "#d6e3ff",
+                        "secondary-container": "#fed488",
+                        "surface-bright": "#fcf9f5",
+                        "primary": "#002045",
+                        "surface-container-high": "#ebe8e4",
+                        "on-tertiary-fixed": "#001f23",
+                        "on-secondary-fixed": "#261900",
+                        "tertiary": "#002528",
+                        "on-error": "#ffffff",
+                        "surface-container": "#f0ede9",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#1a365d",
+                        "inverse-surface": "#31302e",
+                        "on-primary-container": "#86a0cd",
+                        "background": "#fcf9f5",
+                        "on-surface": "#1c1c1a",
+                        "secondary": "#775a19",
+                        "surface": "#fcf9f5",
+                        "on-primary-fixed-variant": "#2d476f",
+                        "tertiary-fixed": "#88f3ff",
+                        "deep-navy": "#081D3A",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#dcdad6",
+                        "inverse-primary": "#adc7f7",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#74777f",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "tertiary-fixed-dim": "#67d6e3",
+                        "surface-variant": "#e5e2de",
+                        "surface-container-highest": "#e5e2de",
+                        "on-tertiary-fixed-variant": "#004f56",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#c4c6cf",
+                        "surface-container-low": "#f6f3ef",
+                        "primary-fixed-dim": "#adc7f7",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#455f88",
+                        "tertiary-container": "#003c41",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#43474e",
+                        "inverse-on-surface": "#f3f0ec",
+                        "secondary-fixed-dim": "#e9c176",
+                        "on-tertiary-container": "#35adb9",
+                        "ocean-teal": "#1E4F6F"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "element-gap": "16px",
+                        "section-gap": "120px",
+                        "gutter": "24px",
+                        "margin-desktop": "80px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "body-md": ["Montserrat"],
+                        "headline-md": ["Playfair Display"],
+                        "display-xl": ["Playfair Display"],
+                        "label-sm": ["Montserrat"],
+                        "label-lg": ["Montserrat"],
+                        "headline-lg": ["Playfair Display"],
+                        "body-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "display-xl": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "500"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        
+        .cultural-pattern {
+            background-image: radial-gradient(circle at 1px 1px, #E7DBB4 1px, transparent 0);
+            background-size: 40px 40px;
+            opacity: 0.1;
+        }
+
+        .destination-card:hover .card-image {
+            transform: scale(1.05);
+        }
+
+        .glass-nav {
+            background: rgba(252, 249, 245, 0.8);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 glass-nav border-b border-sand-beige/30">
+<div class="max-w-7xl mx-auto flex justify-between items-center px-margin-desktop py-4">
+<div class="flex items-center gap-8">
+<a class="flex items-center" href="#">
+<img alt="ASIKEL VOYAGES" class="h-16 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLswy3JDiteGg8UvpEWBHNE1_ZmXji1mjBhGHT-ECkk5US7gWRIyjiIaYW7pcZGQppyz2JjKzcZMHRdnV69Z8YaoHYbU2uwPQFzwD0Oh2G_ymbTzTh0fjHO-P6tq7mWRNAbNZfTx_NpGwhp8z527F5uDghe-9INfusfoSY2GLNyTXQtJ8plGqvpoSC9XIMQU9dFLcFNksz5cXVNaJxjBMpX9wca23nxnaYAsAlZwFDu8Dy0G9U9hcivL_A"/>
+</a>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="font-label-lg text-label-lg text-secondary border-b-2 border-secondary pb-1" href="first.html">Home</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-300" href="destinations.html">Destinations</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-300" href="about.html">About Us</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-colors duration-300" href="contact.html">Contact</a>
+</nav>
+<div class="flex items-center gap-6">
+<button class="hidden lg:flex items-center text-deep-navy">
+<span class="material-symbols-outlined mr-2">search</span>
+</button>
+<a href="contact.html" class="bg-deep-navy text-on-primary px-8 py-3 font-label-lg text-label-lg hover:opacity-90 transition-all active:scale-95 inline-block">Book Now</a>
+</div>
+</div>
+</header>
+<main class="pt-32">
+<!-- Hero Section -->
+<section class="relative h-[60vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-deep-navy/40 z-10"></div>
+<img class="w-full h-full object-cover" data-alt="A sweeping cinematic view of the Tunisian landscape at dusk, featuring ancient architectural structures and the Mediterranean sea under a soft orange and gold sunset. The image uses high-contrast lighting and a premium travel photography aesthetic to evoke a sense of heritage and luxury, aligning with the deep navy and gold brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6cDkUQdQ-ccFuJGZxDnwpdO1sH_m8n0C_IExgKP80MImWMn9nCSTbMPosjayjfRkr_mZKKq5B90zP8vL3byRfzT_SwFjM_5yDjzlp6x-5TaY7cjyteQ5mnrys8LahtOVoEGV0DM1Q5a-Oa_21OwMQu8nA6sZ3GoKSOLi0hYgI2wE-vQo2QnU0hNQazJQFX1BV9-UdG6iDIcEUms7kpuxpxTRKboETHFdPZ8I0G4oBFlPW79kWd_xZGG3otC00noW4C6nFEF3DYEA"/>
+</div>
+<div class="relative z-20 max-w-7xl mx-auto px-margin-desktop w-full">
+<div class="max-w-2xl">
+<span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-[0.2em] mb-4 block">Uncover the Soul of Carthage</span>
+<h1 class="font-display-xl text-display-xl text-white mb-6">Our Destinations</h1>
+<p class="font-body-lg text-body-lg text-surface-variant max-w-lg">From the emerald forests of the North to the infinite golden dunes of the Sahara, explore the authentic mosaic of Tunisia.</p>
+</div>
+</div>
+</section>
+<!-- Destination Grid Section -->
+<section class="relative py-section-gap">
+<div class="cultural-pattern absolute inset-0 -z-10"></div>
+<div class="max-w-7xl mx-auto px-margin-desktop">
+<!-- Filter Bar (Conceptual) -->
+<div class="flex flex-wrap items-center justify-between mb-16 gap-8 border-b border-sand-beige pb-6">
+<div class="flex gap-8">
+<button class="font-label-lg text-label-lg text-deep-navy border-b-2 border-secondary pb-1">All Regions</button>
+<button class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-all">Coastal</button>
+<button class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-all">Historical</button>
+<button class="font-label-lg text-label-lg text-on-surface-variant hover:text-secondary transition-all">Desert</button>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Sorted By:</span>
+<span class="font-label-lg text-label-lg text-deep-navy">Authenticity</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- 1. Northern Coast -->
+<div class="md:col-span-8 group cursor-pointer">
+<div class="relative overflow-hidden aspect-[16/9] bg-surface-container shadow-sm border border-sand-beige/30 transition-all duration-500">
+<img class="card-image w-full h-full object-cover transition-transform duration-700" data-alt="A lush and serene aerial view of the Northern Coast of Tunisia near Tabarka, showcasing dense green forests meeting the turquoise Mediterranean sea with sharp rocky cliffs. The lighting is crisp and natural, highlighting the rich textures of the landscape in a professional, minimalist travel brochure style with soft navy accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQVIEWIr_nSdp1dRevGLtZvYhK1sBeEtyNpQ-hmZ0nZGOMfBNiQn41JxabUKAwfUMkD_1E5VZwy3G9eb_AFJULswt3fdonpPccNLSuBPrmJ4U7G1vexnx6xA_YMPAOiqC4fv4jVjuNxX4_gM0IrsNG5t1ECx1bbN57Awvvkj51o58OP6-IU8P36gwtJKSfdp7HvI8E_zcdw6Q0QLzxyNH5yazWB1JU0oVkHlp1P9r66yMutIj71um109eob6YoJA4lCqYNoXKtJ2s"/>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-navy/90 via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-10 w-full flex justify-between items-end">
+<div>
+<span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-widest mb-2 block">Region: The Emerald North</span>
+<h3 class="font-headline-lg text-headline-lg text-white mb-2">Northern Coast</h3>
+<p class="font-body-md text-body-md text-surface-variant max-w-sm">Discover Tabarka and Bizerte, where the Atlas mountains meet the sea in a symphony of green and blue.</p>
+</div>
+<button class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-6 py-3 font-label-lg text-label-lg hover:bg-secondary hover:border-secondary transition-all flex items-center gap-2">
+                                    Explore More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- 2. The Capital -->
+<div class="md:col-span-4 group cursor-pointer">
+<div class="relative overflow-hidden h-full bg-surface-container shadow-sm border border-sand-beige/30 transition-all duration-500">
+<img class="card-image w-full h-full object-cover transition-transform duration-700" data-alt="The iconic white and blue architecture of Sidi Bou Said in the Tunis capital region, featuring ornate wooden doors and bougainvillea flowers against a bright blue sky. The composition is clean and sophisticated, using a bright, high-key lighting style to emphasize the minimalist beauty of the Maghreb heritage." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPNbixmcTrEbrVoUaHI-vZwCEVphYRxzvzuQomdtJv96KeJ-gFZW-q7Avn4GjOlfkprMHIoHPlXFiObj0j0jX-PpZAQcSY5LZjIq47Qc8N_zWOn683JDtepXxa1AQq2r_ZTD-KAukxaRMJ97Et2-6IrlsEmeIhLTMHba2LL34BWQkxvT-yOOmKjw79aNz0UTrlEaP677LSppvGxq5cbp22-A9STDT0qnwvNc0uGeK7jRyST6qmjRSjDrzLym0XtNgRgvtlrmpdi60"/>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-navy/90 via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-widest mb-2 block">The Heart of History</span>
+<h3 class="font-headline-md text-headline-md text-white mb-4">The Capital</h3>
+<p class="font-body-md text-body-md text-surface-variant mb-6 line-clamp-2">Walk through the Roman ruins of Carthage and the vibrant alleys of the Medina in Tunis.</p>
+<button class="text-secondary-fixed-dim font-label-lg text-label-lg flex items-center gap-2 group-hover:gap-4 transition-all">
+                                    View Details <span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- 3. The Sahel -->
+<div class="md:col-span-5 group cursor-pointer">
+<div class="relative overflow-hidden aspect-square bg-surface-container shadow-sm border border-sand-beige/30 transition-all duration-500">
+<img class="card-image w-full h-full object-cover transition-transform duration-700" data-alt="A stunning view of a Tunisian Ribat in Monastir at sunrise, with warm golden light reflecting off the ancient limestone walls and the calm sea in the background. The aesthetic is professional and timeless, emphasizing cultural tactility and historical depth through rich textures and a sophisticated sand-beige and navy palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiywdvLE_9zliD_7Ejo_AshrjbbhCPIMX3ARSscYZqJdvCsjrZgxzuRfoB98HKGX8jZ5NF_MN5WThzau5DwVIPm8lKLT4JVRMQFVBlxuCLvSAYnFSywe_bBeFeM_8M_LG5TwhcwUY7yoCkV-Xb4LNakCPM4AnL9pBk-7LJwUsYMv3Ojz1AHWEfJz6LwRal4B2kIuc3cGZ-aaPWGzSE12mXsrBkxw896v5tUcll9LDAjwS4rB65V4XJ8QE3TBGon3DDpzlEo0xPkuM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-navy/90 via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-widest mb-2 block">Coastal Elegance</span>
+<h3 class="font-headline-md text-headline-md text-white mb-4">The Sahel</h3>
+<p class="font-body-md text-body-md text-surface-variant mb-6">Sun-drenched Sousse and Monastir, where ancient fortresses guard golden sandy beaches.</p>
+<button class="text-white border border-white/30 px-6 py-2 font-label-lg text-label-lg hover:bg-white hover:text-deep-navy transition-all">
+                                    Explore More
+                                </button>
+</div>
+</div>
+</div>
+<!-- 4. The Great South -->
+<div class="md:col-span-7 group cursor-pointer">
+<div class="relative overflow-hidden h-full bg-surface-container shadow-sm border border-sand-beige/30 transition-all duration-500">
+<img class="card-image w-full h-full object-cover transition-transform duration-700" data-alt="A breathtaking view of the Sahara desert dunes in Douz, Tunisia, at blue hour with the first stars appearing. The sand ripples are sharp and detailed, transitioning from warm orange to deep navy shadows. The image captures a serene, aspirational, and deeply-rooted cultural experience, consistent with high-end luxury travel branding." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8WOhcEV-8D9NtJYv2oXQyv0Ch2vTIKPr1eQRYMnUhaPmFpphJmmCSHE4la3hezmkv7ibeFwTW6DJz3VfjsyJFYSsTzb4y89aRNCK3NNxIeBJakZPVUMtJ_-3_E1nO-scw4GM9D4XroX8IqsqrUuJIWUtGYkVqEFy4NhEeJ6HBpcws8oH2xX8aw-N_AfAxyo044J_3kRPpcrcSuvfkXgpY6H97XrMa21MrSU7J0ILUokRUwPY3G2T-5-VYwT7JSxKEQbDXpcLIJvs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-navy/95 via-transparent to-transparent opacity-90"></div>
+<div class="absolute bottom-0 left-0 p-10 w-full flex justify-between items-center">
+<div class="max-w-md">
+<span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-widest mb-2 block">Eternal Sahara</span>
+<h3 class="font-headline-lg text-headline-lg text-white mb-3">The Great South</h3>
+<p class="font-body-md text-body-md text-surface-variant">Venture into the heart of the Sahara. From the troglodyte homes of Matmata to the palm groves of Tozeur.</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 rounded-full border border-secondary flex items-center justify-center text-secondary mb-4 group-hover:bg-secondary group-hover:text-white transition-all">
+<span class="material-symbols-outlined text-3xl">explore</span>
+</div>
+<span class="font-label-sm text-label-sm text-white uppercase tracking-tighter">Start Journey</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Signature Experience Banner -->
+<section class="bg-surface-container-high py-24 overflow-hidden">
+<div class="max-w-7xl mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div class="relative">
+<div class="absolute -top-12 -left-12 w-48 h-48 opacity-10">
+<svg class="text-secondary" fill="currentColor" viewbox="0 0 100 100">
+<path d="M50 0L61.2 38.8H100L68.8 61.2L80 100L50 77.6L20 100L31.2 61.2L0 38.8H38.8L50 0Z"></path>
+</svg>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-deep-navy mb-8">Tailor-Made Authenticity</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 leading-relaxed">Asikel Voyages isn't just an agency; it's a bridge to the true soul of Tunisia. We curate experiences that respect local heritage while providing world-class logistics and comfort.</p>
+<div class="flex flex-col gap-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1">verified</span>
+<div>
+<h4 class="font-headline-md text-[18px] text-deep-navy mb-1">Expert Local Guides</h4>
+<p class="text-on-surface-variant">Connecting you with the people who know the land's secrets best.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1">laundry</span>
+<div>
+<h4 class="font-headline-md text-[18px] text-deep-navy mb-1">Premium Accommodations</h4>
+<p class="text-on-surface-variant">Handpicked boutique hotels and traditional Dar stays.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<img class="w-full h-64 object-cover" data-alt="Close up detail of traditional Tunisian ceramic patterns and textures. Vibrant colors of blue, yellow, and red with geometric shapes. High-end, sharp focus, professional interior design photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUG--Dnli8wioxX25cWgoeLykbjgldRXty1AnR7vu9HthPNqtOn0ofz8tQv5VJpXCcTY43Nu63jr76Ao9mtBK7SQe-9PVMtO_VncTCKArGayLg9ovLivbwxEo6_Ik5xM2qxrnbJosi_H925oHFIKSeoiiXNz-eERv9o9R-4dJxpR5kCHy6AxtFiVguc7Bam6qdDhX5m87Acb7lyoG4r8e1Ty9MSJ_ehPZ6K7qIe7N2lIIj0AICpikDTGg0DF4Zt3mP-StqJV_i7LY"/>
+<img class="w-full h-64 object-cover mt-12" data-alt="A traditional Berber tent set in the Sahara dunes at dusk with warm lantern lighting inside. Romantic, aspirational mood with a minimalist composition and luxury travel aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlkZeqVqo8YXPc26GfMUuOIQHtvyJ5Lna6txTXC4c3JmvkbzS0KAnlGcW8Ix0busiP_B4UYv0f96-jOEBwoKYiAAi2Nx4jDE2W0NLjsoD-9okawnooHPuutO4UHezBIU2HHdWxVsIOpYmb4jqNw7co9lkThffFD40ebClBvyYfYdUTNo9PfqFfSW0tRDZcV6DYNQZ09dJj8vAFiOIlGGLk7xmaAFydK0JOeuCgWbZeSz9Nz3-8tXGzQMGYA3RgJldux92xvaKIXfM"/>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest border-t border-sand-beige py-section-gap">
+<div class="max-w-7xl mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<!-- Brand Column -->
+<div class="md:col-span-1">
+<a class="inline-block mb-6" href="#">
+<img alt="ASIKEL VOYAGES" class="h-20 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLswy3JDiteGg8UvpEWBHNE1_ZmXji1mjBhGHT-ECkk5US7gWRIyjiIaYW7pcZGQppyz2JjKzcZMHRdnV69Z8YaoHYbU2uwPQFzwD0Oh2G_ymbTzTh0fjHO-P6tq7mWRNAbNZfTx_NpGwhp8z527F5uDghe-9INfusfoSY2GLNyTXQtJ8plGqvpoSC9XIMQU9dFLcFNksz5cXVNaJxjBMpX9wca23nxnaYAsAlZwFDu8Dy0G9U9hcivL_A"/>
+</a>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed">
+                    Agence de Voyages - Tunisie. Experts in cultural journeys and luxury escapades across the Maghreb.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 border border-sand-beige flex items-center justify-center rounded-full hover:bg-deep-navy hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-lg">share</span>
+</a>
+<a class="w-10 h-10 border border-sand-beige flex items-center justify-center rounded-full hover:bg-deep-navy hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-lg">mail</span>
+</a>
+</div>
+</div>
+<!-- Links 1 -->
+<div>
+<h4 class="font-label-lg text-label-lg text-deep-navy uppercase tracking-widest mb-8">Navigation</h4>
+<ul class="flex flex-col gap-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-all" href="#">Destinations</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-all" href="#">Experiences</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-all" href="#">About Our Agency</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-all" href="#">Contact Us</a></li>
+</ul>
+</div>
+<!-- Links 2 -->
+<div>
+<h4 class="font-label-lg text-label-lg text-deep-navy uppercase tracking-widest mb-8">Legal</h4>
+<ul class="flex flex-col gap-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-all" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-all" href="#">Terms of Service</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-all" href="#">Newsletter</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-all" href="#">Cookies Settings</a></li>
+</ul>
+</div>
+<!-- Newsletter -->
+<div>
+<h4 class="font-label-lg text-label-lg text-deep-navy uppercase tracking-widest mb-8">Newsletter</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Subscribe for exclusive travel insights and early access to our seasonal tours.</p>
+<div class="relative">
+<input class="w-full bg-transparent border-b border-sand-beige py-3 px-0 focus:outline-none focus:border-secondary font-label-sm transition-all" placeholder="YOUR EMAIL" type="email"/>
+<button class="absolute right-0 bottom-3 text-secondary hover:translate-x-2 transition-transform">
+<span class="material-symbols-outlined">east</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-margin-desktop mt-20 pt-8 border-t border-sand-beige/30 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 ASIKEL VOYAGES. Agence de Voyages - Tunisie. All rights reserved.</p>
+<div class="flex gap-6 items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-tighter">Developed with heritage</span>
+<span class="w-px h-4 bg-sand-beige"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold">Tunisia</span>
+</div>
+</div>
+</footer>
+<!-- Interactive Micro-interactions -->
+<script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Header transparency shift on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-sm');
+            } else {
+                header.classList.remove('shadow-sm');
+            }
+        });
+    </script>
+</body></html>
+
