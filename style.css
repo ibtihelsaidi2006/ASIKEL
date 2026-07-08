@@ -1,0 +1,25 @@
+/* Shared custom styles */
+.btn-book {
+	display: inline-block;
+	background: #07233a; /* deep navy */
+	color: #ffffff;
+	padding: 12px 28px;
+	border-radius: 8px;
+	text-decoration: none;
+	font-weight: 600;
+	box-shadow: 0 6px 18px rgba(7, 35, 58, 0.18);
+	transition: transform 160ms ease, background-color 160ms ease;
+}
+.btn-book:hover {
+	transform: translateY(-3px);
+	background: #0a2f47;
+}
+.btn-book:active {
+	transform: translateY(-1px);
+}
+
+/* Small variant used in headers */
+.btn-book.small {
+	padding: 8px 18px;
+	border-radius: 6px;
+}
