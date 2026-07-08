@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Expires" content="0"/>
+<title>Tour Packages | ASIKEL VOYAGES</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary-container": "#353634",
+            "surface-container-highest": "#d9e3f9",
+            "on-primary-fixed": "#001b3c",
+            "secondary-fixed": "#ffdea5",
+            "tertiary": "#1f211f",
+            "surface": "#f9f9ff",
+            "surface-container": "#e7eeff",
+            "primary-fixed": "#d6e3ff",
+            "on-secondary": "#ffffff",
+            "on-primary-container": "#86a0cd",
+            "background": "#f9f9ff",
+            "on-error": "#ffffff",
+            "surface-tint": "#455f88",
+            "on-error-container": "#93000a",
+            "inverse-surface": "#273141",
+            "on-tertiary-fixed-variant": "#464745",
+            "surface-dim": "#d0daf0",
+            "on-secondary-fixed": "#261900",
+            "secondary-fixed-dim": "#e9c176",
+            "error": "#ba1a1a",
+            "surface-variant": "#d9e3f9",
+            "on-primary-fixed-variant": "#2d476f",
+            "secondary-container": "#fed488",
+            "surface-container-low": "#f0f3ff",
+            "secondary": "#775a19",
+            "error-container": "#ffdad6",
+            "surface-container-high": "#dee8ff",
+            "inverse-on-surface": "#ebf1ff",
+            "primary-container": "#1a365d",
+            "on-background": "#121c2c",
+            "on-surface": "#121c2c",
+            "on-tertiary-fixed": "#1a1c1a",
+            "primary-fixed-dim": "#adc7f7",
+            "outline": "#74777f",
+            "outline-variant": "#c4c6cf",
+            "surface-bright": "#f9f9ff",
+            "on-tertiary": "#ffffff",
+            "inverse-primary": "#adc7f7",
+            "on-secondary-container": "#785a1a",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-container": "#9f9f9c",
+            "tertiary-fixed": "#e3e2e0",
+            "tertiary-fixed-dim": "#c7c6c4",
+            "on-surface-variant": "#43474e",
+            "on-secondary-fixed-variant": "#5d4201",
+            "on-primary": "#ffffff",
+            "primary": "#002045"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "margin-desktop": "80px",
+            "unit": "8px",
+            "margin-mobile": "20px",
+            "container-max": "1280px",
+            "gutter": "24px"
+          },
+          "fontFamily": {
+            "headline-md": ["Playfair Display"],
+            "headline-lg": ["Playfair Display"],
+            "headline-sm": ["Playfair Display"],
+            "label-md": ["Montserrat"],
+            "display-lg": ["Playfair Display"],
+            "headline-lg-mobile": ["Playfair Display"],
+            "body-lg": ["Montserrat"],
+            "body-md": ["Montserrat"]
+          },
+          "fontSize": {
+            "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+            "headline-lg": ["48px", { "lineHeight": "56px", "fontWeight": "600" }],
+            "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+            "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+            "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-lg-mobile": ["36px", { "lineHeight": "44px", "fontWeight": "600" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      font-size: 20px;
+    }
+    .cultural-divider {
+      position: relative;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #775a19, transparent);
+      width: 100%;
+      margin: 2rem 0;
+    }
+    .cultural-divider::after {
+      content: 'ⵗ';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #f9f9ff;
+      padding: 0 10px;
+      color: #775a19;
+      font-size: 1.2rem;
+    }
+    .card-hover-effect {
+      transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    .card-hover-effect:hover {
+      transform: translateY(-8px);
+    }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #f9f9ff; }
+    ::-webkit-scrollbar-thumb { background: #002045; border-radius: 10px; }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary-container">
+<!-- TopNavBar Navigation -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-secondary/20">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<img alt="ASIKEL VOYAGES Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLu0KsBel5iyzVNHOCsT2oi69-2ss5B80R7AAjYF1cWL5iOGeEq3NW0rvqEJRnmKvXyu0jvicYGEr3rfOQP0rx-60hudog2uqu9BwACQDEJa97IavrEjl-okivhg8fzNgxYYXpxA3R0vuS1yIwJoqkrU7z1DS6EZudLT0NRZR_uhc7aLKlVDyyoKOvcpv1A0vsQA_0Q0gP_fqcVgjikDehXL5Et5aFDl6ZZcUL32BwlX09ECmRM6bORt-xc"/>
+<span class="hidden md:block font-headline-md text-headline-md font-bold tracking-widest text-primary">ASIKEL VOYAGES</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-secondary transition-colors duration-300" href="first.html">Home</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-secondary transition-colors duration-300" href="destinations.html">Destinations</a>
+<a class="text-secondary border-b border-secondary font-bold pb-1 font-label-md text-label-md transition-colors duration-300" href="packages.html">Tour Packages</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-secondary transition-colors duration-300" href="about.html">About Us</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="hidden lg:block text-primary font-label-md text-label-md px-4 py-2 hover:opacity-70 transition-opacity" href="contact.html">Contact</a>
+<a class="bg-primary text-white font-label-md text-label-md px-6 py-3 rounded hover:scale-95 transition-transform duration-200" href="contact.html">Book Now</a>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative h-[40vh] md:h-[50vh] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A panoramic, high-contrast photograph of the golden Tunisian Sahara at sunset, showing majestic dunes with soft shadows. The lighting is warm and cinematic, emphasizing the vast, exclusive nature of the landscape. The sky is a gradient of deep orange and soft violet, creating a serene, luxurious editorial feel." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCy7QwY-gIVIM2hB4onJhkWIHfJNAZ83D9fJJxzXBNuljkWK3tYfdaQFFdEWos1zki4qfACJv75e17nHBe18_HiirFVwIwaaWpL2ImDmCO0PmMsVMsUZE12tLjMhNYKUjZIlP4d_qv-VikvcdFPAbvKMgU4u3SjhGJ_FfAkD9MNSs5kKAC8sUhdztQWMb-HumuDDTeVdlAecUvLbjmr0ZykCTG9OywCcoDtLsDghGSxdjN2DBRuFoE6')"></div>
+<div class="absolute inset-0 bg-primary/20 backdrop-brightness-75"></div>
+</div>
+<div class="relative z-10 text-center text-white px-margin-mobile">
+<h1 class="font-headline-lg text-headline-lg md:text-display-lg mb-4">Curated Journeys</h1>
+<p class="font-body-lg text-body-lg max-w-2xl mx-auto opacity-90">Explore the heart of Tunisia through our exclusive selection of luxury tours and cultural expeditions.</p>
+</div>
+</section>
+<!-- Main Content Area -->
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-20">
+<div class="flex flex-col lg:flex-row gap-gutter">
+<!-- Sidebar / Filters -->
+<aside class="w-full lg:w-1/4 space-y-10">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-6">Refine Selection</h3>
+<div class="cultural-divider !m-0 !mb-6 after:bg-background"></div>
+</div>
+<!-- Filter: Duration -->
+<div class="space-y-4">
+<label class="font-label-md text-label-md text-secondary uppercase tracking-widest">Duration</label>
+<div class="flex flex-col gap-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 border-outline rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-on-surface-variant group-hover:text-primary transition-colors">Short Escapes (1-3 Days)</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-5 h-5 border-outline rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-on-surface-variant group-hover:text-primary transition-colors">Weekly Immersions (4-8 Days)</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 border-outline rounded text-primary focus:ring-primary" type="checkbox"/>
+<span class="text-on-surface-variant group-hover:text-primary transition-colors">Grand Expeditions (9+ Days)</span>
+</label>
+</div>
+</div>
+<!-- Filter: Price Range -->
+<div class="space-y-4">
+<label class="font-label-md text-label-md text-secondary uppercase tracking-widest">Price Range</label>
+<div class="px-2">
+<input class="w-full h-1 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary" max="5000" min="500" step="100" type="range"/>
+<div class="flex justify-between mt-2 font-label-md text-on-surface-variant">
+<span>TND 500</span>
+<span>TND 5,000+</span>
+</div>
+</div>
+</div>
+<!-- Cultural Decorative Element -->
+<div class="pt-10 hidden lg:block">
+<div class="p-8 bg-surface-container-low border border-secondary/10 rounded-lg text-center space-y-4">
+<span class="material-symbols-outlined text-secondary text-4xl">travel_explore</span>
+<p class="font-headline-sm text-primary">Bespoke Travel</p>
+<p class="font-body-md text-on-surface-variant italic">"We craft journeys as unique as the sands of the Sahara."</p>
+<button class="w-full border border-secondary text-secondary py-3 font-label-md hover:bg-secondary hover:text-white transition-all">Request Custom Quote</button>
+</div>
+</div>
+</aside>
+<!-- Tour Listings -->
+<section class="w-full lg:w-3/4 space-y-12">
+<!-- Detailed Tour Card 1 -->
+<article class="bg-white border border-outline-variant/30 flex flex-col md:flex-row card-hover-effect overflow-hidden shadow-sm">
+<div class="w-full md:w-2/5 h-64 md:h-auto relative">
+<div class="w-full h-full bg-cover bg-center" data-alt="A wide angle landscape of the Tunisian Sahara dunes during the blue hour, featuring a small, luxury berber camp with warm lanterns glowing against the deep blue and orange sky. The visual style is premium and evocative, highlighting the solitude and majesty of the desert for the 'Great Sahara Trek' tour." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCpiNmVZTFfp51GxI74Udn5tzirU2TU1tWiMTe-W3RATXUVoPVReJCru1DGuvLVDZvEgHqYPLpyX6x2BEiTKG9Vx1q76vTSYpZzZk9Oq5VBPSawp0T7MQkxOfEdbppdtI0ODKxkzO7flMOZVjl3JdWXDYI7bX4Fx8NfPv-V1_lgAnWkHIYlxZXzGrXrxV-5lr0SIv-dwaX6fR8VGoI_3glOCMJdYr51XE6LIrWpBHIrD5jZyLc4jJko')"></div>
+<div class="absolute top-4 left-4 bg-primary text-white px-4 py-1 font-label-md text-xs uppercase tracking-tighter">Bestseller</div>
+</div>
+<div class="w-full md:w-3/5 p-8 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h2 class="font-headline-md text-headline-md text-primary">The Great Sahara Trek</h2>
+<div class="text-right">
+<span class="block font-label-md text-xs text-on-surface-variant uppercase">Starting from</span>
+<span class="font-headline-sm text-secondary">$1,850</span>
+</div>
+</div>
+<p class="font-body-md text-on-surface-variant mb-6 line-clamp-2">An epic 8-day expedition deep into the heart of the Grand Erg Oriental. Experience the silence of the dunes and the hospitality of nomadic tribes under the starlit sky.</p>
+<!-- Highlights Grid -->
+<div class="grid grid-cols-2 gap-y-4 mb-8">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">schedule</span>
+<span class="font-label-md text-label-md">8 Days / 7 Nights</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">stars</span>
+<span class="font-label-md text-label-md">Private Guide</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">camping</span>
+<span class="font-label-md text-label-md">Luxury Camp Stay</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">local_activity</span>
+<span class="font-label-md text-label-md">Stargazing Gala</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 pt-4 border-t border-outline-variant/20">
+<button class="flex-1 bg-primary text-white py-4 font-label-md hover:opacity-90 transition-opacity">Book Consultation</button>
+<button class="flex-1 border border-secondary text-secondary py-4 font-label-md hover:bg-secondary hover:text-white transition-all">View Itinerary</button>
+</div>
+</div>
+</article>
+<!-- Detailed Tour Card 2 -->
+<article class="bg-white border border-outline-variant/30 flex flex-col md:flex-row card-hover-effect overflow-hidden shadow-sm">
+<div class="w-full md:w-2/5 h-64 md:h-auto relative">
+<div class="w-full h-full bg-cover bg-center" data-alt="A vibrant shot of the white-and-blue architecture of Sidi Bou Said, Tunisia, overlooking the Mediterranean Sea. The lighting is bright and clear, capturing the Mediterranean luxury and the intricate architectural details of the traditional Tunisian windows. The mood is sophisticated and culturally rich, matching the 'Imperial Cities' aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBL18Ryix4dSN3BhX4RiSdioJpzdSKK1sKS5_XgO07daig4CkbvbBy54RqUBllxPNcFu1w7gCu0grq57qAsLABiZNpy1EAx3goAwmzKFJ6K-LMgxf-qNuUn3rwQQ9Q5xm4R2W1G2xnteRWitHlrtxovRR--x250eeUv3KLBFwOw0xzJyu9Bk3ybyJa1RCAQRbvUxN6Z_LTlD_P5uFOPnBlmkv_Q2yvFEx3IXCS-HKLqfqOrmNVaivho')"></div>
+</div>
+<div class="w-full md:w-3/5 p-8 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h2 class="font-headline-md text-headline-md text-primary">Imperial Cities Tour</h2>
+<div class="text-right">
+<span class="block font-label-md text-xs text-on-surface-variant uppercase">Starting from</span>
+<span class="font-headline-sm text-secondary">$2,200</span>
+</div>
+</div>
+<p class="font-body-md text-on-surface-variant mb-6 line-clamp-2">Trace the history of ancient empires from Carthage to the winding medinas of Tunis and Kairouan. A cultural journey through time.</p>
+<div class="grid grid-cols-2 gap-y-4 mb-8">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">schedule</span>
+<span class="font-label-md text-label-md">6 Days / 5 Nights</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">museum</span>
+<span class="font-label-md text-label-md">VIP Museum Access</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">restaurant</span>
+<span class="font-label-md text-label-md">Traditional Fine Dining</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">directions_car</span>
+<span class="font-label-md text-label-md">Private Chauffeur</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 pt-4 border-t border-outline-variant/20">
+<button class="flex-1 bg-primary text-white py-4 font-label-md hover:opacity-90 transition-opacity">Book Consultation</button>
+<button class="flex-1 border border-secondary text-secondary py-4 font-label-md hover:bg-secondary hover:text-white transition-all">View Itinerary</button>
+</div>
+</div>
+</article>
+<!-- Detailed Tour Card 3 -->
+<article class="bg-white border border-outline-variant/30 flex flex-col md:flex-row card-hover-effect overflow-hidden shadow-sm">
+<div class="w-full md:w-2/5 h-64 md:h-auto relative">
+<div class="w-full h-full bg-cover bg-center" data-alt="A luxury yacht anchored in a turquoise Mediterranean bay off the coast of Tunisia, with white sandy beaches and ancient Roman ruins visible in the background. The scene is sun-drenched and exclusive, featuring minimalist luxury elements. The style is modern editorial with a high-key, bright atmosphere." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAlZJAIEjrhPlfrmkb9kwpZmGWUSIqIvHDkgrBBlNejNRJCCTeTPKcMAshNwPMs2ZgJ9Fdjspiu4NCd-l07d2__iShTUg6o_eAq1d9MUaD4HzugYaqLnlD6DZFZoTfpw54rWAkvSiZGj2_JF5STjmn_mMYBQhelV4IXPKFm88pPG8OsndIbpAfca8M1EbqxPNgDK7CvTILNpfuZXHSjpO_yGHnKiaqqTYXB3zH1KyLngsWLtdhE5Uyg')"></div>
+</div>
+<div class="w-full md:w-3/5 p-8 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h2 class="font-headline-md text-headline-md text-primary">Luxury Mediterranean Escape</h2>
+<div class="text-right">
+<span class="block font-label-md text-xs text-on-surface-variant uppercase">Starting from</span>
+<span class="font-headline-sm text-secondary">TND 3,450</span>
+</div>
+</div>
+<p class="font-body-md text-on-surface-variant mb-6 line-clamp-2">Relax in absolute luxury on the pristine shores of Djerba and Hammamet. Private villas, spa treatments, and yacht cruises.</p>
+<div class="grid grid-cols-2 gap-y-4 mb-8">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">schedule</span>
+<span class="font-label-md text-label-md">10 Days / 9 Nights</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">spa</span>
+<span class="font-label-md text-label-md">Unlimited Spa Access</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">directions_boat</span>
+<span class="font-label-md text-label-md">Sunset Yacht Cruise</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">beach_access</span>
+<span class="font-label-md text-label-md">Private Beach Access</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 pt-4 border-t border-outline-variant/20">
+<button class="flex-1 bg-primary text-white py-4 font-label-md hover:opacity-90 transition-opacity">Book Consultation</button>
+<button class="flex-1 border border-secondary text-secondary py-4 font-label-md hover:bg-secondary hover:text-white transition-all">View Itinerary</button>
+</div>
+</div>
+</article>
+</section>
+</div>
+</main>
+<!-- CTA Section -->
+<section class="bg-surface-container py-24">
+<div class="max-w-container-max mx-auto px-margin-mobile text-center">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Didn't find your perfect path?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-10">Our travel specialists are ready to curate a bespoke itinerary tailored precisely to your desires and travel rhythm.</p>
+<button class="bg-secondary text-white px-10 py-5 font-label-md text-lg rounded-sm hover:scale-105 transition-transform">Create My Bespoke Journey</button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-primary py-12 border-t border-secondary-container/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-gutter">
+<div class="flex flex-col items-center md:items-start gap-4">
+<span class="font-headline-sm text-headline-sm text-secondary-fixed uppercase tracking-tighter">ASIKEL VOYAGES</span>
+<p class="text-on-primary-container font-body-md text-sm text-center md:text-left">© 2026 Asikel Voyages. Crafting Timeless Tunisian Journeys.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-on-primary-container font-label-md hover:text-white transition-opacity opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="text-on-primary-container font-label-md hover:text-white transition-opacity opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="text-on-primary-container font-label-md hover:text-white transition-opacity opacity-80 hover:opacity-100" href="#">Sustainability</a>
+<a class="text-on-primary-container font-label-md hover:text-white transition-opacity opacity-80 hover:opacity-100" href="#">Press Kit</a>
+</div>
+</div>
+</footer>
+<script>
+    
+    document.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 50) {
+        header.classList.add('shadow-md');
+        header.classList.remove('bg-surface/90');
+        header.classList.add('bg-surface');
+      } else {
+        header.classList.remove('shadow-md');
+        header.classList.add('bg-surface/90');
+        header.classList.remove('bg-surface');
+      }
+    });
+
+    
+    const range = document.querySelector('input[type="range"]');
+    range.addEventListener('input', (e) => {
+      const value = e.target.value;
+      
+    });
+  </script>
+</body></html>
