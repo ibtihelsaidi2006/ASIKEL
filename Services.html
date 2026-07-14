@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Destinations | Asikel Voyages</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Montserrat:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                    "surface": "#f9f9ff",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed": "#261900",
+                    "on-primary-fixed": "#001b3c",
+                    "surface-variant": "#d9e3f9",
+                    "surface-dim": "#d0daf0",
+                    "on-surface-variant": "#43474e",
+                    "tertiary": "#1f211f",
+                    "secondary-fixed": "#ffdea5",
+                    "outline": "#74777f",
+                    "on-tertiary-container": "#9f9f9c",
+                    "secondary": "#775a19",
+                    "accent-turquoise": "#2BA7B3",
+                    "surface-container-low": "#f0f3ff",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#c7c6c4",
+                    "surface-bright": "#f9f9ff",
+                    "on-error-container": "#93000a",
+                    "surface-container": "#e7eeff",
+                    "primary-container": "#1a365d",
+                    "secondary-container": "#fed488",
+                    "surface-container-highest": "#d9e3f9",
+                    "tertiary-fixed": "#e3e2e0",
+                    "on-secondary-fixed-variant": "#5d4201",
+                    "primary": "#002045",
+                    "on-primary-fixed-variant": "#2d476f",
+                    "background": "#f9f9ff",
+                    "on-tertiary-fixed": "#1a1c1a",
+                    "on-secondary-container": "#785a1a",
+                    "outline-variant": "#c4c6cf",
+                    "on-surface": "#121c2c",
+                    "inverse-primary": "#adc7f7",
+                    "on-secondary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "surface-tint": "#455f88",
+                    "on-background": "#121c2c",
+                    "surface-container-high": "#dee8ff",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed-dim": "#adc7f7",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#e9c176",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#273141",
+                    "on-tertiary-fixed-variant": "#464745",
+                    "on-primary-container": "#86a0cd",
+                    "inverse-on-surface": "#ebf1ff",
+                    "primary-fixed": "#d6e3ff",
+                    "tertiary-container": "#353634"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "margin-mobile": "20px",
+                    "gutter": "24px",
+                    "margin-desktop": "80px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Montserrat"],
+                    "body-md": ["Montserrat"],
+                    "headline-md": ["Playfair Display"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"],
+                    "headline-sm": ["Playfair Display"],
+                    "label-md": ["Montserrat"],
+                    "display-lg": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["20px", {"lineHeight": "20px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["36px", {"lineHeight": "44px", "fontWeight": "600"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "600"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+                },
+            },
+        }
+    </script>
+<style>
+       .amazigh-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 40px 0;
+    gap: 20px;
+}
+.amazigh-divider::before, .amazigh-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #C9A24D; 
+    opacity: 0.6;
+}
+.amazigh-divider .diamond {
+    width: 10px;
+    height: 10px;
+    background: #C9A24D;
+    transform: rotate(45deg);
+    flex-shrink: 0;
+}
+               .destination-card:hover img {
+            transform: scale(1.05);
+       }
+        .heritage-pattern {            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0l2 18h18l-15 11 6 11-11-7-11 7 6-11-15-11h18z' fill='%232BA7B3' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-accent-turquoise/30 selection:text-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 transition-all duration-500 border-b border-accent-turquoise/10 bg-white/80 backdrop-blur-md">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<a href="Home.html" class="flex items-center gap-4 hover:opacity-90 transition-opacity duration-300">
+<img alt="ASIKEL VOYAGES" class="h-10 md:h-14" src="c:\Users\lassed\Downloads\Capture_d_écran_2026-07-10_102148-removebg-preview.png"/>
+
+</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-accent-turquoise transition-colors duration-300" href="Home.html">Home</a>
+<a class="font-label-md text-label-md text-accent-turquoise border-b border-accent-turquoise font-bold pb-1 transition-all" href="Destinations.html">Destinations</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-accent-turquoise transition-colors duration-300" href="Packages.html">Tour Packages</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-accent-turquoise transition-colors duration-300" href="About.html">About Us</a>
+</div>
+<div class="flex gap-4 items-center">
+
+<a class="hidden lg:block font-label-sm text-label-sm text-accent-turquoise border border-accent-turquoise px-6 py-2 rounded-sm hover:bg-accent-turquoise hover:text-white transition-all duration-300" href="Contact.html">Book Now</a>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24">
+<!-- Hero Section -->
+<header class="max-w-container-max mx-auto px-margin-desktop mb-16">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div class="max-w-2xl">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest mb-4 block">Legal Framework</span>
+<h1 class="font-headline-lg text-headline-lg text-primary mb-6">Terms of Service</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        Welcome to Asikel Voyages. These terms outline the rules and regulations for the use of our curated Tunisian travel experiences. By booking with us, you accept these terms in full.
+                    </p>
+</div>
+<div class="text-right">
+<p class="font-label-md text-label-md text-outline">Last Updated: July 2026</p>
+</div>
+</div>
+<div class="amazigh-divider"></div>
+</header>
+<!-- Content Layout -->
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Sticky Sidebar Navigation -->
+<aside class="hidden md:block md:col-span-3">
+<div class="sticky top-32 space-y-6">
+<h4 class="font-label-md text-label-md text-primary uppercase tracking-tighter mb-8">On this page</h4>
+<nav class="flex flex-col gap-4 border-l border-outline-variant">
+<a class="pl-4 font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-all" href="#booking">Booking Conditions</a>
+<a class="pl-4 font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-all" href="#cancellation">Cancellation Policies</a>
+<a class="pl-4 font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-all" href="#liability">Liability &amp; Risk</a>
+<a class="pl-4 font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-all" href="#governing">Governing Law</a>
+<a class="pl-4 font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-all" href="#privacy">Privacy Integration</a>
+</nav>
+</div>
+</aside>
+<!-- Main Legal Content -->
+<div class="md:col-span-9 space-y-16">
+<!-- Section: Booking Conditions -->
+<section class="scroll-mt-32" id="booking">
+<div class="flex items-center gap-4 mb-8">
+<span class="material-symbols-outlined text-secondary text-3xl">calendar_month</span>
+<h2 class="font-headline-md text-headline-md text-primary">1. Booking Conditions</h2>
+</div>
+<div class="prose prose-lg max-w-none text-on-surface-variant space-y-6">
+<p>All bookings made with Asikel Voyages are subject to availability at the time of confirmation. A booking is considered binding only upon receipt of a 30% non-refundable deposit and a written confirmation from our concierge team.</p>
+<div class="bg-surface-container p-8 border-l-4 border-secondary">
+<h5 class="font-label-md text-label-md text-primary mb-2">PRICING POLICY</h5>
+<p class="text-body-md italic">Prices are quoted in EUR or USD and are inclusive of local Tunisian taxes. We reserve the right to adjust pricing based on significant fluctuations in exchange rates or government-mandated tourism fees.</p>
+</div>
+<ul class="list-none space-y-4">
+<li class="flex gap-4">
+<span class="text-secondary font-bold">01.</span>
+<span>Full payment must be settled at least 45 days prior to the arrival date.</span>
+</li>
+<li class="flex gap-4">
+<span class="text-secondary font-bold">02.</span>
+<span>Special requests (dietary, mobility, cultural) must be communicated at the time of booking.</span>
+</li>
+</ul>
+</div>
+</section>
+<!-- Section: Cancellation Policies -->
+<section class="scroll-mt-32" id="cancellation">
+<div class="flex items-center gap-4 mb-8">
+<span class="material-symbols-outlined text-secondary text-3xl">event_busy</span>
+<h2 class="font-headline-md text-headline-md text-primary">2. Cancellation Policies</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-gutter">
+<div class="border border-outline-variant p-8 bg-surface-container-lowest">
+<h3 class="font-label-md text-label-md text-secondary mb-4 uppercase">Standard Voyages</h3>
+<ul class="space-y-4 text-on-surface-variant">
+<li class="flex justify-between border-b border-outline-variant/30 pb-2">
+<span>45+ days notice</span>
+<span class="font-bold text-primary">Deposit only</span>
+</li>
+<li class="flex justify-between border-b border-outline-variant/30 pb-2">
+<span>30-44 days notice</span>
+<span class="font-bold text-primary">50% total cost</span>
+</li>
+<li class="flex justify-between">
+<span>Less than 30 days</span>
+<span class="font-bold text-primary">100% total cost</span>
+</li>
+</ul>
+</div>
+<div class="border border-outline-variant p-8 bg-surface-container-lowest">
+<h3 class="font-label-md text-label-md text-secondary mb-4 uppercase">Bespoke Expeditions</h3>
+<p class="text-on-surface-variant text-body-md">For private Sahara expeditions or high-luxury villa stays, separate cancellation terms may apply depending on the specific venue and logistical requirements. These will be highlighted in your specific itinerary proposal.</p>
+</div>
+</div>
+</section>
+<!-- Section: Liability -->
+<section class="scroll-mt-32" id="liability">
+<div class="flex items-center gap-4 mb-8">
+<span class="material-symbols-outlined text-secondary text-3xl">gavel</span>
+<h2 class="font-headline-md text-headline-md text-primary">3. Liability &amp; Risk</h2>
+</div>
+<div class="prose prose-lg max-w-none text-on-surface-variant space-y-6">
+<p>Asikel Voyages acts as an intermediary between the client and local service providers (hotels, transport, specialized guides). While we curate our partners with extreme care, we are not liable for acts of God, force majeure, or service interruptions caused by third parties.</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-6">
+<div class="p-6 bg-surface-container-high rounded-lg text-center">
+<span class="material-symbols-outlined text-primary mb-3">shield</span>
+<p class="font-label-md text-label-md">Mandatory Insurance</p>
+</div>
+<div class="p-6 bg-surface-container-high rounded-lg text-center">
+<span class="material-symbols-outlined text-primary mb-3">health_and_safety</span>
+<p class="font-label-md text-label-md">Medical Disclosure</p>
+</div>
+<div class="p-6 bg-surface-container-high rounded-lg text-center">
+<span class="material-symbols-outlined text-primary mb-3">explore</span>
+<p class="font-label-md text-label-md">Local Law Compliance</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Governing Law -->
+<section class="scroll-mt-32" id="governing">
+<div class="flex items-center gap-4 mb-8">
+<span class="material-symbols-outlined text-secondary text-3xl">balance</span>
+<h2 class="font-headline-md text-headline-md text-primary">4. Governing Law</h2>
+</div>
+<p class="text-on-surface-variant leading-relaxed">
+                        These terms and conditions are governed by and construed in accordance with the laws of the Republic of Tunisia. Any disputes relating to these terms and conditions will be subject to the exclusive jurisdiction of the courts of Tunis. We encourage mediation as a first step in resolving any disagreements.
+                    </p>
+<div class="mt-12 p-8 border border-secondary/30 flex flex-col md:flex-row items-center gap-8">
+<div class="w-24 h-24 flex-shrink-0 bg-primary/5 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-5xl">verified</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">Sustainable Travel Commitment</h4>
+<p class="text-on-surface-variant">By agreeing to these terms, you also acknowledge our sustainability charter, committing to respectful engagement with local Tunisian communities and heritage sites.</p>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-white w-full py-16 border-t border-accent-turquoise/20">
+<div class="flex flex-col md:flex-row justify-between items-start px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-12">
+<div class="space-y-6">
+<a href="Home.html" class="flex items-center gap-4 hover:opacity-90 transition-opacity duration-300">
+<img alt="ASIKEL VOYAGES" class="h-10 md:h-14" src="c:\Users\lassed\Downloads\Capture_d_écran_2026-07-10_112415-removebg-preview.png"/>
+</a>
+<p class="max-w-xs font-body-md text-body-md text-white/60">
+                Crafting Timeless Tunisian Journeys since 2004. Member of the Tunisian Federation of Travel Agencies.
+            </p>
+<div class="flex gap-6">
+<a class="material-symbols-outlined hover:text-accent-turquoise transition-colors" href="#">public</a>
+<a class="material-symbols-outlined hover:text-accent-turquoise transition-colors" href="#">share</a>
+<a class="material-symbols-outlined hover:text-accent-turquoise transition-colors" href="#">mail</a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-x-20 gap-y-4">
+<a class="text-white/60 font-label-md text-label-md hover:text-accent-turquoise transition-colors duration-300" href="Privacy.html">Privacy Policy</a>
+<a class="text-white/60 font-label-md text-label-md hover:text-accent-turquoise transition-colors duration-300" href="Services.html">Terms of Service</a>
+<a class="text-white/60 font-label-md text-label-md hover:text-accent-turquoise transition-colors duration-300" href="Sustainability.html">Sustainability</a>
+<a class="text-white/60 font-label-md text-label-md hover:text-accent-turquoise transition-colors duration-300" href="Press.html">Press Kit</a>
+</div>
+<div class="space-y-4 w-full md:w-auto">
+<h6 class="font-label-md text-xs uppercase tracking-widest text-accent-turquoise">Newsletter</h6>
+<div class="flex border-b border-accent-turquoise/30 pb-2">
+<input class="bg-transparent border-none focus:ring-0 text-white placeholder:text-white/30 w-full" placeholder="Your email" type="email"/>
+<button class="material-symbols-outlined text-accent-turquoise hover:translate-x-1 transition-transform">east</button>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-label-md text-xs text-white/40">© 2026 Asikel Voyages. Crafting Timeless Tunisian Journeys.</p>
+<div class="flex gap-4">
+<div class="w-10 h-6 bg-white/5 rounded-sm border border-white/10"></div>
+<div class="w-10 h-6 bg-white/5 rounded-sm border border-white/10"></div>
+<div class="w-10 h-6 bg-white/5 rounded-sm border border-white/10"></div>
+</div>
+</div>
+</footer>
+<script>
+    // Smooth navigation bar transition on scroll
+    const nav = document.getElementById('top-nav');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            nav.classList.add('nav-scrolled');
+        } else {
+            nav.classList.remove('nav-scrolled');
+        }
+    });
+
+    // Simple animation for cards on entry
+    const observerOptions = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+                entry.target.classList.remove('opacity-0', 'translate-y-10');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.group.relative.aspect-\\[3\\/4\\]').forEach(card => {
+        card.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-1000');
+        observer.observe(card);
+    });
+</script>
+</body></html>

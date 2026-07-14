@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Destinations | Asikel Voyages</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Montserrat:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                    "surface": "#f9f9ff",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed": "#261900",
+                    "on-primary-fixed": "#001b3c",
+                    "surface-variant": "#d9e3f9",
+                    "surface-dim": "#d0daf0",
+                    "on-surface-variant": "#43474e",
+                    "tertiary": "#1f211f",
+                    "secondary-fixed": "#ffdea5",
+                    "outline": "#74777f",
+                    "on-tertiary-container": "#9f9f9c",
+                    "secondary": "#775a19",
+                    "accent-turquoise": "#2BA7B3",
+                    "surface-container-low": "#f0f3ff",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#c7c6c4",
+                    "surface-bright": "#f9f9ff",
+                    "on-error-container": "#93000a",
+                    "surface-container": "#e7eeff",
+                    "primary-container": "#1a365d",
+                    "secondary-container": "#fed488",
+                    "surface-container-highest": "#d9e3f9",
+                    "tertiary-fixed": "#e3e2e0",
+                    "on-secondary-fixed-variant": "#5d4201",
+                    "primary": "#002045",
+                    "on-primary-fixed-variant": "#2d476f",
+                    "background": "#f9f9ff",
+                    "on-tertiary-fixed": "#1a1c1a",
+                    "on-secondary-container": "#785a1a",
+                    "outline-variant": "#c4c6cf",
+                    "on-surface": "#121c2c",
+                    "inverse-primary": "#adc7f7",
+                    "on-secondary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "surface-tint": "#455f88",
+                    "on-background": "#121c2c",
+                    "surface-container-high": "#dee8ff",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed-dim": "#adc7f7",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#e9c176",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#273141",
+                    "on-tertiary-fixed-variant": "#464745",
+                    "on-primary-container": "#86a0cd",
+                    "inverse-on-surface": "#ebf1ff",
+                    "primary-fixed": "#d6e3ff",
+                    "tertiary-container": "#353634"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "margin-mobile": "20px",
+                    "gutter": "24px",
+                    "margin-desktop": "80px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Montserrat"],
+                    "body-md": ["Montserrat"],
+                    "headline-md": ["Playfair Display"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"],
+                    "headline-sm": ["Playfair Display"],
+                    "label-md": ["Montserrat"],
+                    "display-lg": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["20px", {"lineHeight": "20px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["36px", {"lineHeight": "44px", "fontWeight": "600"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "600"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+                },
+            },
+        }
+    </script>
+<style>
+        .amazigh-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin: 40px 0;
+        }
+        .amazigh-divider::before, .amazigh-divider::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: #2BA7B3; 
+            opacity: 0.5;
+        }
+        .amazigh-divider span {
+            padding: 0 20px;
+            color: #2BA7B3; 
+            font-size: 24px;
+        }
+        .destination-card-overlay {
+            background: linear-gradient(0deg, rgba(0,32,69,0.9) 0%, rgba(0,32,69,0) 60%);
+        }
+        
+        .destination-card:hover img {
+            transform: scale(1.05);
+        }
+        .heritage-pattern {
+           background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0l2 18h18l-15 11 6 11-11-7-11 7 6-11-15-11h18z' fill='%232BA7B3' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+       }   
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 transition-all duration-500 border-b border-accent-turquoise/10 bg-white/80 backdrop-blur-md">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<a href="Home.html" class="flex items-center gap-4 hover:opacity-90 transition-opacity duration-300">
+<img alt="ASIKEL VOYAGES" class="h-10 md:h-14" src="c:\Users\lassed\Downloads\Capture_d_écran_2026-07-10_102148-removebg-preview.png"/>
+
+</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-accent-turquoise transition-colors duration-300" href="Home.html">Home</a>
+<a class="font-label-md text-label-md text-accent-turquoise border-b border-accent-turquoise font-bold pb-1 transition-all" href="Destinations.html">Destinations</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-accent-turquoise transition-colors duration-300" href="Packages.html">Tour Packages</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-accent-turquoise transition-colors duration-300" href="About.html">About Us</a>
+</div>
+<div class="flex gap-4 items-center">
+
+<a class="hidden lg:block font-label-sm text-label-sm text-accent-turquoise border border-accent-turquoise px-6 py-2 rounded-sm hover:bg-accent-turquoise hover:text-white transition-all duration-300" href="Contact.html">Book Now</a>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24">
+<!-- Our Private Collection -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-display-lg text-[40px] md:text-display-lg mb-4 text-secondary-fixed">Our Private Collection</h2>
+<div class="amazigh-divider">
+<span class="material-symbols-outlined amazigh-glyph">grain</span>
+</div>
+<p class="font-body-md text-on-surface-variant max-w-xl mx-auto">Selected signature experiences designed for privacy, depth, and ultimate comfort.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Card 1 -->
+<div class="group">
+<div class="relative overflow-hidden h-[500px] mb-6">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A wide-angle landscape shot of the deep Sahara desert in Tunisia, featuring pristine white sand dunes under a clear cobalt blue sky. A solitary, elegantly dressed figure stands at the peak of a dune, looking towards the horizon. The lighting is crisp and high-contrast, emphasizing the architectural curves of the landscape in a modern editorial style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzYRBV2BdSzDydTLSkgTcLlRVe2o7XObmuh091q_P7EQglb1Qu0aAsMM1TvoK9Co7JEQxBG4ypKt676o1qlTeu1p0OqzAmfKTBIEPsyxpZCWN7blcmDz7hZbK4fNieuWvboe3ARMHBTxvIFvvzJKEIA7lBfY46aVMUwK5IbzCmdEwNdmIOT_v7mjVcPqbKrrNCIyfQROsVG-9sWFB05Coq_NveX7UfYUsyaZV1RyqemDWxyE5iiM0e">
+<div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-primary/80 to-transparent">
+<span class="bg-brand-turquoise text-white text-[10px] px-2 py-1 mb-2 inline-block font-label-md tracking-tighter">8 DAYS | PRIVATE JET</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">The Grand Saharan Expedition</h3>
+<p class="font-body-md text-on-surface-variant mb-6">Traverse the silent dunes in private 4x4 convoys with gourmet catering under the stars.</p>
+<button class="font-label-md text-label-md text-secondary border-b border-secondary/30 pb-1 group-hover:border-secondary transition-all">View Itinerary</button>
+</div>
+<!-- Card 2 -->
+<div class="group">
+<div class="relative overflow-hidden h-[500px] mb-6">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="An interior view of a restored ancient Roman villa in Carthage, Tunisia. The space features white marble pillars, intricate floor mosaics, and a central courtyard pool reflecting the bright midday sun. Luxury linens and minimalist furniture are placed tastefully throughout. The mood is timeless, serene, and culturally rich, with a creamy off-white color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9-T6MzuW1uFPecka0LL-niQTMa6M1Guk89vpgS_wOxZMLaw5gglzj0wJLthPU7PrM1QQ9dw5i0ebeqM1CghuDk4HEqubK0BrRCAbnllAkLXj9kfoJMpYe_vDUgTaFGApL6IqmP9o9hipJKJnAtlJo94gAkwCP91qeVRWiebiLItVcAH36pElX399zmHdBWSE6eqs02lOZDKxTXioOKQ4jqwmjlqM1xEmyH6tih3DbFSUSTg1UVpm0">
+<div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-primary/80 to-transparent">
+<span class="bg-brand-turquoise text-white text-[10px] px-2 py-1 mb-2 inline-block font-label-md tracking-tighter">5 DAYS | CULTURAL HERITAGE</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Carthaginian Heritage Retreat</h3>
+<p class="font-body-md text-on-surface-variant mb-6">Exclusive after-hours access to ancient ruins and private stays in restored mansions.</p>
+<button class="font-label-md text-label-md text-secondary border-b border-secondary/30 pb-1 group-hover:border-secondary transition-all">View Itinerary</button>
+</div>
+<!-- Card 3 -->
+<div class="group">
+<div class="relative overflow-hidden h-[500px] mb-6">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A luxury yacht anchored in a turquoise Mediterranean cove along the Tunisian coast. The water is crystal clear, revealing white sand beneath. Dramatic limestone cliffs frame the bay. On the deck, a refined lunch is set with local fruits and white wine. The style is premium travel editorial, with high-key lighting and a sense of absolute seclusion and luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKmVrU8_Qs6rd0KQJKwoO9SjZyB3cP1quGYu9eEhY4FYXP4kqp6mxiSlTXZ458nMNESXZNA5rz1XTAV7YH4BgeAVkthiA38D0SlR0BDGVoQE31IGSJkpT6A5fsdyrAICzFcrpGKr0ZRxmlB-llcT-agUboxSK0uI4K_hY3C8IPT6BNw8x2s_x8Er3jFCirnD7aZNKzuBDHo1GUlPuNCXPdJPX3ADCXdYuen73HVHXi6sPq5ov_XuVt">
+<div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-primary/80 to-transparent">
+<span class="bg-brand-turquoise text-white text-[10px] px-2 py-1 mb-2 inline-block font-label-md tracking-tighter">6 DAYS | COASTAL LUXE</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Mediterranean Coastal Escape</h3>
+<p class="font-body-md text-on-surface-variant mb-6">Private yacht charters along the turquoise coast, visiting hidden bays and island ruins.</p>
+<button class="font-label-md text-label-md text-secondary border-b border-secondary/30 pb-1 group-hover:border-secondary transition-all">View Itinerary</button>
+</div>
+</div>
+</section>
+<!-- Bespoke Journey Planning -->
+<section class="bg-surface-container-low py-32 overflow-hidden">
+<div class="px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row items-center gap-20">
+<div class="flex-1">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8 leading-tight">Bespoke Journey Planning</h2>
+<div class="space-y-12">
+<div class="flex gap-6 items-start">
+<div class="w-12 h-12 rounded-full border border-secondary flex items-center justify-center flex-shrink-0 text-secondary font-bold">01</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">Personal Consultation</h4>
+<p class="text-on-surface-variant font-body-md">Our experts spend time understanding your travel philosophy and specific desires for your Tunisian voyage.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<div class="w-12 h-12 rounded-full border border-secondary flex items-center justify-center flex-shrink-0 text-secondary font-bold">02</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">Curated Itinerary Design</h4>
+<p class="text-on-surface-variant font-body-md">We craft a unique route, selecting exclusive accommodations and private experiences unavailable to the general public.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<div class="w-12 h-12 rounded-full border border-secondary flex items-center justify-center flex-shrink-0 text-secondary font-bold">03</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">On-the-Ground Excellence</h4>
+<p class="text-on-surface-variant font-body-md">24/7 concierge support and our finest private guides ensure your journey is flawless from start to finish.</p>
+</div>
+</div>
+</div>
+<button class="mt-12 bg-primary text-white px-10 py-4 font-label-md text-label-md hover:bg-primary-container transition-all">Consult an Expert</button>
+</div>
+<div class="flex-1 relative">
+<div class="grid grid-cols-2 gap-4">
+<img class="w-full aspect-[3/4] object-cover mt-12" data-alt="A flat lay photograph of luxury travel essentials on a heavy linen cloth: a leather-bound notebook, a vintage fountain pen, a brass compass, and a detailed physical map of Tunisia. The lighting is soft and warm, coming from a side window, highlighting the rich textures of the materials. The mood is one of thoughtful preparation and high-end artisanal quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxevHQvxiikBhaSaHf5_-vku7nF_wvwEIOwHZR0XDhw5kXIVv8asbfnfv97XZgliitc_qilf1XvElggU-Nky496VTCrdN6VEUTSbXNyERBENhT9zGqaJCmmPnRfVryNKrLx0BmMmshPMGDdM6e3OaRDgYLZgWLlWxX-KHYXtukKJoE_zLbcq_0d750P2BwIowzta6E8nhhy4uFha8BX42EZqlwRV1c6T7wlTXhIaj7yh2VUoQSzpHn">
+<img class="w-full aspect-[3/4] object-cover" data-alt="A portrait of a sophisticated travel expert in a light-filled, modern office with Tunisian artisanal decor. The person is looking at a large digital screen showing an itinerary while holding a cup of traditional tea. The atmosphere is professional, warm, and focused on bespoke service. High-key, clean light-mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXWoTZ4a66kqcV4nB2gppwN1b5tZqGuccQWYeBeZDwMsz9kwzymBinhYbIZEZPPB8aH5f2hcNVYekh4IzWzTRULK5q4Zw0IFY4JDFY0CfMkMWmLYspmhORDq6uZnfiv3KlYIb-mK-HBqQgdu1a18uCmLRr4d2JbTdVdoKX42Ec8JF-wAPXggJsgSidq72JV1KUSQHGPQx2y3ocf8Wr0JITRkWTYM-g2m7S9MVAQ2POfJ7vLyon_eqU">
+</div>
+</div>
+</div>
+</section>
+<!-- Travel Essentials FAQ -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Travel Essentials</h2>
+<p class="font-body-md text-on-surface-variant">Frequently asked questions about our private services.</p>
+</div>
+<div class="max-w-3xl mx-auto space-y-4">
+<div class="border-b border-outline-variant py-6 cursor-pointer group" onclick="this.querySelector('p').classList.toggle('hidden')">
+<div class="flex justify-between items-center">
+<h4 class="font-headline-sm text-headline-sm text-primary">How far in advance should I book?</h4>
+<span class="material-symbols-outlined text-secondary">expand_more</span>
+</div>
+<p class="mt-4 text-on-surface-variant font-body-md">For bespoke tours, we recommend booking at least 3-6 months in advance to secure the most exclusive luxury accommodations and specific private guides.</p>
+</div>
+<div class="border-b border-outline-variant py-6 cursor-pointer group" onclick="this.querySelector('p').classList.toggle('hidden')">
+<div class="flex justify-between items-center">
+<h4 class="font-headline-sm text-headline-sm text-primary">Can itineraries be adjusted during the trip?</h4>
+<span class="material-symbols-outlined text-secondary">expand_more</span>
+</div>
+<p class="mt-4 text-on-surface-variant font-body-md">Yes, one of the primary benefits of a private tour is flexibility. Your dedicated concierge and guide can pivot the daily schedule based on your interests and local conditions.</p>
+</div>
+<div class="border-b border-outline-variant py-6 cursor-pointer group" onclick="this.querySelector('p').classList.toggle('hidden')">
+<div class="flex justify-between items-center">
+<h4 class="font-headline-sm text-headline-sm text-primary">What is the group size limit for private tours?</h4>
+<span class="material-symbols-outlined text-secondary">expand_more</span>
+</div>
+<p class="mt-4 text-on-surface-variant font-body-md">Our private tours are typically designed for solo travelers, couples, or small groups of friends and family (up to 12 guests). For larger groups, we can arrange multi-vehicle convoys.</p>
+</div>
+<div class="border-b border-outline-variant py-6 cursor-pointer group" onclick="this.querySelector('p').classList.toggle('hidden')">
+<div class="flex justify-between items-center">
+<h4 class="font-headline-sm text-headline-sm text-primary">Are international flights included?</h4>
+<span class="material-symbols-outlined text-secondary">expand_more</span>
+</div>
+<p class="mt-4 text-on-surface-variant font-body-md hidden">We focus on ground arrangements and domestic connections. However, our travel consultants can assist in coordinating with your preferred international carriers or private jet services.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<section class="bg-white py-24 border-t border-outline-variant/20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-12">
+<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-primary mb-4">Travel Essentials</h2>
+<div class="cultural-divider mx-auto max-w-xs"></div>
+</div>
+<div class="grid md:grid-cols-2 gap-x-20 gap-y-10">
+<div class="space-y-2 border-l-4 border-accent-turquoise/20 pl-6">
+<h3 class="font-headline-sm text-headline-sm text-accent-turquoise">Best Travel Seasons</h3>
+<p class="font-body-md text-on-surface-variant">Spring (March-May) and Autumn (September-November) offer the most temperate climate for both coastal escapes and Sahara expeditions.</p>
+</div>
+<div class="space-y-2 border-l-4 border-accent-turquoise/20 pl-6">
+<h3 class="font-headline-sm text-headline-sm text-accent-turquoise">Bespoke Customization</h3>
+<p class="font-body-md text-on-surface-variant">Every itinerary can be tailored. From private jet transfers to exclusive archaeological access, we curate to your specific rhythm.</p>
+</div>
+<div class="space-y-2 border-l-4 border-accent-turquoise/20 pl-6">
+<h3 class="font-headline-sm text-headline-sm text-accent-turquoise">Travel Insurance</h3>
+<p class="font-body-md text-on-surface-variant">We strongly recommend comprehensive travel insurance for all our guests to ensure peace of mind during your Tunisian journey.</p>
+</div>
+<div class="space-y-2 border-l-4 border-accent-turquoise/20 pl-6">
+<h3 class="font-headline-sm text-headline-sm text-accent-turquoise">Visa Requirements</h3>
+<p class="font-body-md text-on-surface-variant">Most Western travelers enjoy visa-free entry for up to 90 days. Our specialists will provide specific guidance based on your nationality.</p>
+</div>
+</div>
+<div class="mt-12 text-center">
+<a class="font-label-md text-accent-turquoise border-b-2 border-accent-turquoise pb-1 hover:text-primary hover:border-primary transition-colors" href="FAQ.html">View Full FAQ &amp; Travel Guide</a>
+</div>
+</div>
+</section><footer class="bg-primary dark:bg-tertiary-container text-secondary-fixed w-full py-12 border-t border-accent-turquoise/20">
+<div class="flex flex-col md:flex-row justify-between items-start px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-12">
+<div class="space-y-6">
+<a href="Home.html" class="flex items-center gap-4 hover:opacity-90 transition-opacity duration-300">
+<img alt="ASIKEL VOYAGES" class="h-10 md:h-14" src="c:\Users\lassed\Downloads\Capture_d_écran_2026-07-10_112415-removebg-preview.png"/>
+</a>
+<p class="max-w-xs font-body-md text-body-md text-on-primary-container">
+                    Crafting Timeless Tunisian Journeys since 2004. Member of the Tunisian Federation of Travel Agencies.
+                </p>
+<div class="flex gap-6">
+<a class="material-symbols-outlined text-accent-turquoise hover:text-white transition-colors" href="#">public</a>
+<a class="material-symbols-outlined text-accent-turquoise hover:text-white transition-colors" href="#">share</a>
+<a class="material-symbols-outlined text-accent-turquoise hover:text-white transition-colors" href="#">mail</a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-x-20 gap-y-4">
+<a class="text-on-primary-container font-label-md text-label-md hover:text-accent-turquoise transition-colors duration-300" href="Privacy.html">Privacy Policy</a>
+<a class="text-on-primary-container font-label-md text-label-md hover:text-accent-turquoise transition-colors duration-300" href="Services.html">Terms of Service</a>
+<a class="text-on-primary-container font-label-md text-label-md hover:text-accent-turquoise transition-colors duration-300" href="Sustainability.html">Sustainability</a>
+<a class="text-on-primary-container font-label-md text-label-md hover:text-accent-turquoise transition-colors duration-300" href="Press.html">Press Kit</a>
+</div>
+<div class="space-y-4">
+<h6 class="font-label-md text-xs uppercase tracking-widest text-accent-turquoise/60">Newsletter</h6>
+<div class="flex border-b border-accent-turquoise/30 pb-2">
+<input class="bg-transparent border-none focus:ring-0 text-white placeholder:text-white/30 w-full" placeholder="Your email" type="email"/>
+<button class="material-symbols-outlined text-accent-turquoise">east</button>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-label-md text-xs text-on-primary-container/60">© 2026 Asikel Voyages. Crafting Timeless Tunisian Journeys.</p>
+<div class="flex gap-4">
+<div class="w-10 h-6 bg-accent-turquoise/20 rounded-sm"></div>
+<div class="w-10 h-6 bg-accent-turquoise/20 rounded-sm"></div>
+<div class="w-10 h-6 bg-accent-turquoise/20 rounded-sm"></div>
+</div>
+</div>
+</footer>
+<script>
+    // Subtle interaction script
+    document.addEventListener('scroll', () => {
+      const header = document.querySelector('#top-nav');
+      if (window.scrollY > 50) {
+        header.classList.add('shadow-lg');
+        header.classList.add('bg-white');
+        header.classList.remove('bg-white/80');
+      } else {
+        header.classList.remove('shadow-lg');
+        header.classList.remove('bg-white');
+        header.classList.add('bg-white/80');
+      }
+    });
+
+    // Custom range input logic
+    const range = document.querySelector('input[type="range"]');
+    range.addEventListener('input', (e) => {
+      const value = e.target.value;
+      // In a real app, this would trigger the filter logic
+    });
+  </script>
+</body></html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tour Packages | ASIKEL VOYAGES</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                    "surface": "#f9f9ff",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed": "#261900",
+                    "on-primary-fixed": "#001b3c",
+                    "surface-variant": "#d9e3f9",
+                    "surface-dim": "#d0daf0",
+                    "on-surface-variant": "#43474e",
+                    "tertiary": "#1f211f",
+                    "secondary-fixed": "#ffdea5",
+                    "outline": "#74777f",
+                    "on-tertiary-container": "#9f9f9c",
+                    "secondary": "#775a19",
+                    "accent-turquoise": "#2BA7B3",
+                    "surface-container-low": "#f0f3ff",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#c7c6c4",
+                    "surface-bright": "#f9f9ff",
+                    "on-error-container": "#93000a",
+                    "surface-container": "#e7eeff",
+                    "primary-container": "#1a365d",
+                    "secondary-container": "#fed488",
+                    "surface-container-highest": "#d9e3f9",
+                    "tertiary-fixed": "#e3e2e0",
+                    "on-secondary-fixed-variant": "#5d4201",
+                    "primary": "#002045",
+                    "on-primary-fixed-variant": "#2d476f",
+                    "background": "#f9f9ff",
+                    "on-tertiary-fixed": "#1a1c1a",
+                    "on-secondary-container": "#785a1a",
+                    "outline-variant": "#c4c6cf",
+                    "on-surface": "#121c2c",
+                    "inverse-primary": "#adc7f7",
+                    "on-secondary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "surface-tint": "#455f88",
+                    "on-background": "#121c2c",
+                    "surface-container-high": "#dee8ff",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed-dim": "#adc7f7",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#e9c176",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#273141",
+                    "on-tertiary-fixed-variant": "#464745",
+                    "on-primary-container": "#86a0cd",
+                    "inverse-on-surface": "#ebf1ff",
+                    "primary-fixed": "#d6e3ff",
+                    "tertiary-container": "#353634"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "margin-mobile": "20px",
+                    "gutter": "24px",
+                    "margin-desktop": "80px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Montserrat"],
+                    "body-md": ["Montserrat"],
+                    "headline-md": ["Playfair Display"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"],
+                    "headline-sm": ["Playfair Display"],
+                    "label-md": ["Montserrat"],
+                    "display-lg": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["20px", {"lineHeight": "20px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["36px", {"lineHeight": "44px", "fontWeight": "600"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "600"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      font-size: 20px;
+    }
+    .cultural-divider {
+      position: relative;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #2BA7B3, transparent);
+      width: 100%;
+      margin: 2rem 0;
+    }
+    .cultural-divider::after {
+      content: 'ⵗ';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #f9f9ff;
+      padding: 0 10px;
+      color: #2BA7B3;
+      font-size: 1.2rem;
+    }
+    .card-hover-effect {
+      transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    .card-hover-effect:hover {
+      transform: translateY(-8px);
+    }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #f9f9ff; }
+    ::-webkit-scrollbar-thumb { background: #002045; border-radius: 10px; }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-secondary-container">
+<!-- TopNavBar Navigation -->
+<nav class="fixed top-0 w-full z-50 transition-all duration-500 border-b border-accent-turquoise/20 bg-white/80 backdrop-blur-md" id="top-nav">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<a href="Home.html" class="flex items-center gap-4 hover:opacity-90 transition-opacity duration-300">
+<img alt="ASIKEL VOYAGES" class="h-10 md:h-14" src="c:\Users\lassed\Downloads\Capture_d_écran_2026-07-10_102148-removebg-preview.png"/>
+</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-accent-turquoise transition-colors duration-300" href="Home.html">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-accent-turquoise transition-colors duration-300" href="Destinations.html">Destinations</a>
+<a class="font-label-md text-label-md text-accent-turquoise border-b-2 border-accent-turquoise font-bold pb-1 transition-all" href="Packages.html">Tour Packages</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-accent-turquoise transition-colors duration-300" href="About.html">About Us</a>
+</div>
+<div class="flex gap-4 items-center">
+<a class="hidden lg:block font-label-sm text-label-sm text-accent-turquoise border border-accent-turquoise px-6 py-2 rounded-sm hover:bg-accent-turquoise hover:text-white transition-all duration-300" href="Contact.html">
+                    Book Now
+                </a>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-[80vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center scale-105" data-alt="A wide cinematic landscape of the Tunisian Sahara at golden hour, showing soft rolling sand dunes under a clear blue sky. The lighting is warm and ethereal, highlighting the pristine, untouched nature of the desert. The image has a high-contrast, premium editorial feel with a deep navy and cream color palette, emphasizing timelessness and ecological purity." style="background-image: url('https://www.saharansky.com/file/2018/10/camel-trek-saharansky.jpg')"></div>
+<div class="absolute inset-0 bg-primary/30 mix-blend-multiply"></div>
+</div>
+<div class="relative z-10 px-margin-desktop max-w-container-max mx-auto text-white">
+<span class="font-label-md text-label-md uppercase tracking-[0.3em] mb-4 block">Our Commitment</span>
+<h1 class="font-display-lg text-display-lg mb-6 max-w-3xl leading-tight">Preserving the Essence of Tunisia</h1>
+<p class="font-body-lg text-body-lg max-w-xl opacity-90 leading-relaxed mb-8">
+                    At Asikel Voyages, we believe luxury and sustainability are inseparable. Discover how we protect our heritage and landscapes through conscious travel.
+                </p>
+</div>
+</section>
+<!-- Core Values / Services Section -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Values that Define Us</h2>
+<div class="w-24 h-1 bg-secondary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Évasion / Low Impact -->
+<div class="bg-surface-container p-10 border border-outline/10 text-center hover:border-secondary transition-colors duration-500">
+<span class="material-symbols-outlined text-secondary text-5xl mb-6">eco</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Évasion Consciente</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Carbon-neutral explorations that respect the delicate balance of Tunisia's diverse ecosystems, from the Atlas mountains to the Mediterranean shores.</p>
+</div>
+<!-- Authenticité / Local Community -->
+<div class="bg-surface-container p-10 border border-outline/10 text-center hover:border-secondary transition-colors duration-500">
+<span class="material-symbols-outlined text-secondary text-5xl mb-6">temple_hindu</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Authenticité Locale</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Direct support for Amazigh artisans and rural cooperatives, ensuring your visit translates into sustainable economic growth for host communities.</p>
+</div>
+<!-- Preservation / Plastic Free -->
+<div class="bg-surface-container p-10 border border-outline/10 text-center hover:border-secondary transition-colors duration-500">
+<span class="material-symbols-outlined text-secondary text-5xl mb-6">water_drop</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Héritage Préservé</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">A rigorous plastic-free policy across all our journeys, coupled with water conservation techniques inspired by ancient Roman engineering.</p>
+</div>
+</div>
+</section>
+<!-- Asymmetric Layout: Community Support -->
+<section class="py-24 bg-surface-container-low overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-7 relative">
+<div class="aspect-[4/3] bg-cover bg-center shadow-xl" data-alt="A high-quality editorial photograph of a traditional Tunisian weaver working on a loom in a brightly lit, whitewashed courtyard in Djerba. The artisan's hands are focused on intricate wool patterns. The lighting is soft and natural, emphasizing the texture of the fabric and the cultural depth of the scene. The aesthetic is clean and sophisticated with touches of navy blue and gold." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDBxYf40DdnHk4BrOcPS7oYU0geJWcHjn5HphOJFzfXlcakYw_0Q5gZp8qJhbmOvTDwVCc5VZ8QEFuBUMbKtpr8rd192u2CV7aAccFZypdFkI8RZFSavXxcTvVXp2QVwsGA3Bs00LymnltVMLxKfHslOZcKgZxOji1YuAxQpDTUcl5Q5cRtwUfV1rAxop9m3pMxxlEqjZbwOICKm8ijkC_JKUUEpKH4LEHJN-6ubO9sEcIt7Zp8pjdk')"></div>
+<div class="absolute -bottom-10 -right-10 hidden lg:block w-64 h-64 border-8 border-white/50 z-[-1]"></div>
+</div>
+<div class="md:col-span-5">
+<span class="text-secondary font-label-md text-label-md uppercase tracking-widest block mb-4">Empowering Communities</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6 leading-tight">Beyond Tourism, A Social Pact</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                        Every Asikel voyage contributes a percentage of its proceeds to the <i>Atlas Heritage Fund</i>. We prioritize small, family-owned guesthouses and locally sourced organic produce, keeping the cultural fabric of Tunisia vibrant and resilient.
+                    </p>
+<a class="inline-block text-secondary font-label-md text-label-md uppercase tracking-[0.2em] hover-underline-expand pb-1" href="#">Our Impact Report 2025</a>
+</div>
+</div>
+</section>
+<!-- Plastic-Free Initiative (Glassmorphism Bento Grid) -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto">
+<div class="amazigh-divider">
+<span class="material-symbols-outlined text-secondary">flare</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mt-16">
+<div class="md:col-span-2 bg-primary p-12 text-white relative overflow-hidden flex flex-col justify-end min-h-[400px]">
+<div class="absolute inset-0 opacity-20">
+<div class="w-full h-full bg-cover bg-center" data-alt="A minimalist close-up shot of clear, sparkling Mediterranean water over white sand. The surface reflects bright sunlight in a shimmering, hypnotic pattern. The scene evokes purity and cleanliness, reinforcing a zero-waste, plastic-free travel message. The color palette is composed of varied blues, turquoise, and brilliant whites." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBP0jIDccR1MlqMA0xYTCsVgOT7m3nJhk0q0Ib5Cx0tgRMxiOxo4ZAD3_t7ei_MVg9oPwNLxjm389940SRT7JiRim11UnyiK3lPh_YJT0sgKjhlpAirNtvK8XbxGfuTFx1X_iOtIml3jkX5i27vjMTI09EFUN66qOHstFnxQQ5of6OWXxQEg3vTxjNFPq3l9-wltPVmnD1p7ASTY076Afz8oov7VGvdF4WhhM1lNv3NpCMSbj31p7Qk')"></div>
+</div>
+<div class="relative z-10">
+<h3 class="font-headline-md text-headline-md mb-4">Zero-Waste Expeditions</h3>
+<p class="font-body-md text-body-md opacity-80 max-w-lg">We have eliminated 100% of single-use plastics from our safari camps and city excursions. Guests receive reusable artisan-crafted copper flasks upon arrival.</p>
+</div>
+</div>
+<div class="bg-secondary p-12 text-on-secondary flex flex-col justify-center">
+<span class="material-symbols-outlined text-5xl mb-6">forest</span>
+<h3 class="font-headline-sm text-headline-sm mb-4">Reforestation</h3>
+<p class="font-body-md text-body-md opacity-90">For every traveler, we plant ten olive trees in the semi-arid regions of central Tunisia to combat desertification.</p>
+</div>
+<div class="bg-[#40E0D0]/10 border border-[#40E0D0]/30 p-12 text-primary flex flex-col items-center text-center">
+<h4 class="font-label-md text-label-md uppercase mb-2 tracking-widest text-[#40E0D0]">Join the movement</h4>
+<h3 class="font-headline-md text-headline-md mb-6">Book a Responsible Journey</h3>
+<a class="bg-[#40E0D0] text-primary font-bold px-8 py-3 uppercase text-label-md tracking-widest hover:bg-primary hover:text-white transition-all duration-300"href ="Contact.html">Get Started</a>
+</div>
+<div class="md:col-span-2 relative h-[300px]">
+<div class="w-full h-full bg-cover bg-center" data-alt="A cinematic, low-angle shot of a group of eco-travelers and local guides walking through a traditional olive grove in Tunisia. The sun filters through the silver-green leaves, creating a dappled light effect. The mood is peaceful and collaborative. The photography style is modern editorial with a soft color palette of greens, earth tones, and sun-kissed golds." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDR5UDpobAaxCR-oxOIE60OHXHI6BhtI_js-yyZLhGJ-VNx8cUrKxUWnn-7t8GE32H-Du0fklenbLSypXs1w9HABtZS48blmfEIOPsYeRD2qixBfvV_vNwDsMv44QNEqph61ikrnv1-TrOfA3GlWhHuZJatLFVFqbu5FLjyDotEJ1xHdyUooQ1pHVHv7zpac0Bve5tWkm2naQG0rE4BibuaY82sPe5tjvcIpqPKjSJfM93gpyDzmo5O')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
+<div class="absolute bottom-8 left-8 text-white">
+<p class="font-headline-sm text-headline-sm italic">"Travel is the only thing you buy that makes you richer in spirit."</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / CTA -->
+<section class="py-24 bg-surface text-center">
+<div class="max-w-2xl mx-auto px-margin-mobile">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Receive Our Journal</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">Stories of preservation, culture, and exclusive eco-travel routes delivered monthly.</p>
+<form class="flex flex-col md:flex-row gap-4">
+<input class="flex-grow bg-transparent border-0 border-b border-secondary/50 focus:ring-0 focus:border-primary text-body-md px-0 py-3" placeholder="Email Address" type="email"/>
+<button class="bg-primary text-white px-10 py-3 font-label-md text-label-md uppercase tracking-widest hover:bg-secondary transition-colors duration-300" type="submit">Subscribe</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-tertiary-container text-accent-turquoise w-full py-12 border-t border-accent-turquoise/20">
+<div class="flex flex-col md:flex-row justify-between items-start px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-12">
+<div class="space-y-6">
+<a href="Home.html" class="flex items-center gap-4 hover:opacity-90 transition-opacity duration-300">
+<img alt="ASIKEL VOYAGES" class="h-10 md:h-14" src="c:\Users\lassed\Downloads\Capture_d_écran_2026-07-10_112415-removebg-preview.png"/>
+</a>
+<p class="max-w-xs font-body-md text-body-md text-on-primary-container">
+                    Crafting Timeless Tunisian Journeys since 2004. Member of the Tunisian Federation of Travel Agencies.
+                </p>
+<div class="flex gap-6">
+<a class="material-symbols-outlined hover:text-white transition-colors" href="#">public</a>
+<a class="material-symbols-outlined hover:text-white transition-colors" href="#">share</a>
+<a class="material-symbols-outlined hover:text-white transition-colors" href="#">mail</a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-x-20 gap-y-4">
+<a class="text-on-primary-container font-label-md text-label-md hover:text-accent-turquoise transition-opacity duration-300" href="Privacy.html">Privacy Policy</a>
+<a class="text-on-primary-container font-label-md text-label-md hover:text-accent-turquoise transition-opacity duration-300" href="Services.html">Terms of Service</a>
+<a class="text-on-primary-container font-label-md text-label-md hover:text-accent-turquoise transition-opacity duration-300" href="Sustainability.html">Sustainability</a>
+<a class="text-on-primary-container font-label-md text-label-md hover:text-accent-turquoise transition-opacity duration-300" href="Press.html">Press Kit</a>
+</div>
+<div class="space-y-4">
+<h6 class="font-label-md text-xs uppercase tracking-widest text-accent-turquoise/60">Newsletter</h6>
+<div class="flex border-b border-accent-turquoise/30 pb-2">
+<input class="bg-transparent border-none focus:ring-0 text-white placeholder:text-white/30 w-full" placeholder="Your email" type="email"/>
+<button class="material-symbols-outlined text-accent-turquoise hover:text-white transition-colors">east</button>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-label-md text-xs text-on-primary-container/60">© 2026 Asikel Voyages. Crafting Timeless Tunisian Journeys.</p>
+<div class="flex gap-4">
+<div class="w-10 h-6 bg-white/10 rounded-sm"></div>
+<div class="w-10 h-6 bg-white/10 rounded-sm"></div>
+<div class="w-10 h-6 bg-white/10 rounded-sm"></div>
+</div>
+</div>
+</footer>
+<!-- Interactive Layer: Simple Scroll Observer for reveal animations -->
+<script>
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+
+        // Sticky Nav logic
+        window.onscroll = function() {
+            const nav = document.querySelector('nav');
+            if (window.pageYOffset > 50) {
+                nav.classList.add('bg-surface/95', 'backdrop-blur-sm', 'shadow-md');
+                nav.classList.remove('border-accent-turquoise/20');
+            } else {
+                nav.classList.remove('bg-surface/95', 'backdrop-blur-sm', 'shadow-md');
+                nav.classList.add('border-accent-turquoise/20');
+            }
+        };
+    </script>
+</body></html>

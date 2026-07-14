@@ -3,159 +3,165 @@
 <html class="scroll-smooth" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>FAQ | Asikel Voyages</title>
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Playfair+Display:wght@100..900&display=swap" rel="stylesheet"/>
-<!-- Tailwind -->
+<title>Destinations | Asikel Voyages</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<!-- Theme Config -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Montserrat:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                "surface-dim": "#d0daf0",
-                "on-secondary": "#ffffff",
-                "on-tertiary-container": "#9f9f9c",
-                "surface-variant": "#d9e3f9",
-                "tertiary-container": "#353634",
-                "primary-fixed": "#d6e3ff",
-                "error": "#ba1a1a",
-                "on-secondary-fixed-variant": "#5d4201",
-                "on-primary-fixed": "#001b3c",
-                "primary": "#002045",
-                "surface-container-lowest": "#ffffff",
-                "surface-bright": "#f9f9ff",
-                "outline-variant": "#c4c6cf",
-                "tertiary-fixed-dim": "#c7c6c4",
-                "surface-container": "#e7eeff",
-                "surface-container-high": "#dee8ff",
-                "secondary-fixed-dim": "#e9c176",
-                "surface": "#f9f9ff",
-                "inverse-primary": "#adc7f7",
-                "on-error": "#ffffff",
-                "tertiary-fixed": "#e3e2e0",
-                "surface-tint": "#455f88",
-                "on-secondary-container": "#785a1a",
-                "on-tertiary-fixed-variant": "#464745",
-                "primary-fixed-dim": "#adc7f7",
-                "tertiary": "#1f211f",
-                "inverse-surface": "#273141",
-                "on-tertiary-fixed": "#1a1c1a",
-                "on-primary-fixed-variant": "#2d476f",
-                "background": "#f9f9ff",
-                "primary-container": "#1a365d",
-                "surface-container-low": "#f0f3ff",
-                "secondary": "#775a19",
-                "on-surface-variant": "#43474e",
-                "on-secondary-fixed": "#261900",
-                "secondary-fixed": "#ffdea5",
-                "on-surface": "#121c2c",
-                "on-primary": "#ffffff",
-                "secondary-container": "#fed488",
-                "error-container": "#ffdad6",
-                "surface-container-highest": "#d9e3f9",
-                "on-tertiary": "#ffffff",
-                "outline": "#74777f",
-                "on-primary-container": "#86a0cd",
-                "on-background": "#121c2c",
-                "on-error-container": "#93000a",
-                "inverse-on-surface": "#ebf1ff"
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                    "surface": "#f9f9ff",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed": "#261900",
+                    "on-primary-fixed": "#001b3c",
+                    "surface-variant": "#d9e3f9",
+                    "surface-dim": "#d0daf0",
+                    "on-surface-variant": "#43474e",
+                    "tertiary": "#1f211f",
+                    "secondary-fixed": "#ffdea5",
+                    "outline": "#74777f",
+                    "on-tertiary-container": "#9f9f9c",
+                    "secondary": "#775a19",
+                    "accent-turquoise": "#2BA7B3",
+                    "surface-container-low": "#f0f3ff",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#c7c6c4",
+                    "surface-bright": "#f9f9ff",
+                    "on-error-container": "#93000a",
+                    "surface-container": "#e7eeff",
+                    "primary-container": "#1a365d",
+                    "secondary-container": "#fed488",
+                    "surface-container-highest": "#d9e3f9",
+                    "tertiary-fixed": "#e3e2e0",
+                    "on-secondary-fixed-variant": "#5d4201",
+                    "primary": "#002045",
+                    "on-primary-fixed-variant": "#2d476f",
+                    "background": "#f9f9ff",
+                    "on-tertiary-fixed": "#1a1c1a",
+                    "on-secondary-container": "#785a1a",
+                    "outline-variant": "#c4c6cf",
+                    "on-surface": "#121c2c",
+                    "inverse-primary": "#adc7f7",
+                    "on-secondary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "surface-tint": "#455f88",
+                    "on-background": "#121c2c",
+                    "surface-container-high": "#dee8ff",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed-dim": "#adc7f7",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#e9c176",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#273141",
+                    "on-tertiary-fixed-variant": "#464745",
+                    "on-primary-container": "#86a0cd",
+                    "inverse-on-surface": "#ebf1ff",
+                    "primary-fixed": "#d6e3ff",
+                    "tertiary-container": "#353634"
             },
             "borderRadius": {
-                "DEFAULT": "0.125rem",
-                "lg": "0.25rem",
-                "xl": "0.5rem",
-                "full": "0.75rem"
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
             },
             "spacing": {
-                "unit": "8px",
-                "container-max": "1280px",
-                "margin-desktop": "80px",
-                "margin-mobile": "20px",
-                "gutter": "24px"
+                    "unit": "8px",
+                    "margin-mobile": "20px",
+                    "gutter": "24px",
+                    "margin-desktop": "80px",
+                    "container-max": "1280px"
             },
             "fontFamily": {
-                "label-md": ["Montserrat"],
-                "headline-lg-mobile": ["Playfair Display"],
-                "display-lg": ["Playfair Display"],
-                "body-lg": ["Montserrat"],
-                "headline-md": ["Playfair Display"],
-                "headline-lg": ["Playfair Display"],
-                "body-md": ["Montserrat"],
-                "headline-sm": ["Playfair Display"]
+                    "body-lg": ["Montserrat"],
+                    "body-md": ["Montserrat"],
+                    "headline-md": ["Playfair Display"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"],
+                    "headline-sm": ["Playfair Display"],
+                    "label-md": ["Montserrat"],
+                    "display-lg": ["Playfair Display"]
             },
             "fontSize": {
-                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "600"}],
-                "headline-lg-mobile": ["36px", {"lineHeight": "44px", "fontWeight": "600"}],
-                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
-                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
-                "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "600"}],
-                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
-                "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["20px", {"lineHeight": "20px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["36px", {"lineHeight": "44px", "fontWeight": "600"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "600"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
             }
-          },
-        },
-      }
+                },
+            },
+        }
     </script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        .amazigh-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin: 40px 0;
         }
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
-            opacity: 0;
+        .amazigh-divider::before, .amazigh-divider::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: #2BA7B3; 
+            opacity: 0.5;
         }
-        .accordion-item.active .accordion-content {
-            max-height: 1000px;
-            opacity: 1;
-            padding-bottom: 24px;
+        .amazigh-divider span {
+            padding: 0 20px;
+            color: #2BA7B3; 
+            font-size: 24px;
         }
-        .accordion-item.active .chevron {
-            transform: rotate(180deg);
+        .destination-card-overlay {
+            background: linear-gradient(0deg, rgba(0,32,69,0.9) 0%, rgba(0,32,69,0) 60%);
         }
-        .heritage-pattern {
-            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0l2 18h18l-15 11 6 11-11-7-11 7 6-11-15-11h18z' fill='%23775a19' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
-        }
+                .destination-card:hover img {
+            transform: scale(1.05);        }
+      .heritage-pattern {
+           background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0l2 18h18l-15 11 6 11-11-7-11 7 6-11-15-11h18z' fill='%232BA7B3' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+       }
+
     </style>
 </head>
-<body class="bg-surface font-body-md text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<body class="bg-surface text-on-surface font-body-md selection:bg-accent-turquoise/30 selection:text-primary">
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-surface/90 dark:bg-primary/90 backdrop-blur-md border-b border-secondary/20">
-<div class="flex justify-between items-center px-margin-desktop py-unit max-w-container-max mx-auto h-20">
-<div class="font-headline-md text-headline-md font-bold tracking-widest text-primary dark:text-secondary-fixed">ASIKEL VOYAGES</div>
-<div class="hidden md:flex items-center gap-gutter">
-<a class="text-on-surface-variant dark:text-on-primary-fixed-variant font-label-md text-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300" href="first.html">Home</a>
-<a class="text-on-surface-variant dark:text-on-primary-fixed-variant font-label-md text-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300" href="destinations.html">Destinations</a>
-<a class="text-on-surface-variant dark:text-on-primary-fixed-variant font-label-md text-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300" href="packages.html">Tour Packages</a>
-<a class="text-on-surface-variant dark:text-on-primary-fixed-variant font-label-md text-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300" href="about.html">About Us</a>
+<nav class="fixed top-0 w-full z-50 transition-all duration-500 border-b border-accent-turquoise/10 bg-white/80 backdrop-blur-md">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<a href="Home.html" class="flex items-center gap-4 hover:opacity-90 transition-opacity duration-300">
+<img alt="ASIKEL VOYAGES" class="h-10 md:h-14" src="c:\Users\lassed\Downloads\Capture_d_écran_2026-07-10_102148-removebg-preview.png"/>
+
+</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-accent-turquoise transition-colors duration-300" href="Home.html">Home</a>
+<a class="font-label-md text-label-md text-accent-turquoise border-b border-accent-turquoise font-bold pb-1 transition-all" href="Destinations.html">Destinations</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-accent-turquoise transition-colors duration-300" href="Packages.html">Tour Packages</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-accent-turquoise transition-colors duration-300" href="About.html">About Us</a>
 </div>
-<div class="flex items-center gap-4">
-<a class="hidden lg:block text-on-surface-variant dark:text-on-primary-fixed-variant font-label-md text-label-md px-4 py-2 hover:text-secondary transition-colors duration-300" href="contact.html">Contact</a>
-<a class="btn-book" href="contact.html">Book Now</a>
+<div class="flex gap-4 items-center">
+
+<a class="hidden lg:block font-label-sm text-label-sm text-accent-turquoise border border-accent-turquoise px-6 py-2 rounded-sm hover:bg-accent-turquoise hover:text-white transition-all duration-300" href="Contact.html">Book Now</a>
 </div>
 </div>
 </nav>
-<main class="pt-20">
+<main class="pt-32 pb-24">
 <!-- Hero Header -->
-<header class="relative h-[40vh] min-h-[400px] flex items-center justify-center overflow-hidden">
+<header class="relative h-[45vh] min-h-[400px] flex items-center justify-center overflow-hidden">
 <div class="absolute inset-0 z-0">
-<div class="w-full h-full bg-cover bg-center bg-no-repeat" data-alt="A breathtaking, cinematic wide shot of a Tunisian desert oasis at golden hour. The soft amber light illuminates rolling sand dunes and a cluster of vibrant green palm trees reflected in a still pool of water. The overall aesthetic is one of serene luxury, with high contrast and a warm, sophisticated palette of gold, deep navy shadows, and creamy sand tones." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCptFuvCQpe23DYxmcWTfap4q8rHtbkEYRWpKkSdPJxNgRcHtVi4pLqTdangwgASgvDaUYg_FziiEBOUovMMdp_MUK6d578KXcI-stuC_tRXGRgj0FPz4_-XDyfqYx6wiqC3ByK1ZFPZPZYrvA9W8MKob_7uB7X4piY7Y6Rc3ppdWZrUwYfkmWyxBe1BhfOHJ7RjOuo359JybhOIAsmlEPCgJ5d2LVItYlG8oIjYFIYMUGVlzByfGH4')"></div>
-<div class="absolute inset-0 bg-primary/40 backdrop-blur-[2px]"></div>
+<div class="w-full h-full bg-cover bg-center bg-no-repeat" style="background-image: url('https://linstant-m.tn/uploads/5598b2dc34ac179403615167f93800a02c65e4cd.jpg')"></div>
+<div class="absolute inset-0 bg-primary/40 backdrop-blur-[1px]"></div>
 </div>
 <div class="relative z-10 text-center px-margin-mobile">
-<h1 class="font-display-lg text-display-lg text-white mb-4 drop-shadow-lg">Frequently Asked Questions</h1>
-<p class="font-body-lg text-body-lg text-secondary-fixed max-w-2xl mx-auto opacity-90">
-                    Preparing for a journey through the heart of Tunisia. Find essential information to ensure your boutique experience is seamless and soul-stirring.
-                </p>
+<h1 class="font-display-lg text-display-lg text-white mb-6 drop-shadow-lg">Frequently Asked Questions</h1>
+<p class="font-body-lg text-body-lg text-white/90 max-w-2xl mx-auto leading-relaxed">
+                Preparing for a journey through the heart of Tunisia. Find essential information to ensure your boutique experience is seamless and soul-stirring.
+            </p>
 </div>
 </header>
 <!-- FAQ Content Grid -->
@@ -163,138 +169,127 @@
 <div class="max-w-container-max mx-auto px-margin-mobile lg:px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-gutter">
 <!-- Category Navigation (Side) -->
 <aside class="lg:col-span-3 hidden lg:block sticky top-32 h-fit">
-<h3 class="font-label-md text-label-md text-secondary mb-6 border-b border-secondary/20 pb-2">CATEGORIES</h3>
-<ul class="space-y-4">
-<li><a class="font-label-md text-label-md text-on-surface hover:text-secondary transition-colors flex items-center gap-2" href="#planning"><span class="material-symbols-outlined text-sm">explore</span> Planning Your Trip</a></li>
-<li><a class="font-label-md text-label-md text-on-surface hover:text-secondary transition-colors flex items-center gap-2" href="#accommodation"><span class="material-symbols-outlined text-sm">card_travel</span> Accommodations & Transport</a></li>
-<li><a class="font-label-md text-label-md text-on-surface hover:text-secondary transition-colors flex items-center gap-2" href="#sustainability"><span class="material-symbols-outlined text-sm">eco</span> Sustainability & Ethics</a></li>
-<li><a class="font-label-md text-label-md text-on-surface hover:text-secondary transition-colors flex items-center gap-2" href="#booking"><span class="material-symbols-outlined text-sm">event_available</span> Booking & Cancellation</a></li>
+<h3 class="font-label-md text-xs text-turquoise tracking-[0.2em] mb-8 border-b border-turquoise/20 pb-4 uppercase">Categories</h3>
+<ul class="space-y-6">
+<li class=""><a class="font-label-md text-label-md text-on-surface hover:text-turquoise transition-colors flex items-center gap-3" href="#planning"><span class="material-symbols-outlined text-lg">explore</span> Planning Your Trip</a></li>
+<li class=""><a class="font-label-md text-label-md text-on-surface hover:text-turquoise transition-colors flex items-center gap-3" href="#accommodation"><span class="material-symbols-outlined text-lg">card_travel</span> Accommodations &amp; Transport</a></li>
+<li class=""><a class="font-label-md text-label-md text-on-surface hover:text-turquoise transition-colors flex items-center gap-3" href="#sustainability"><span class="material-symbols-outlined text-lg">eco</span> Sustainability &amp; Ethics</a></li>
+<li class=""><a class="font-label-md text-label-md text-on-surface hover:text-turquoise transition-colors flex items-center gap-3" href="#booking"><span class="material-symbols-outlined text-lg">event_available</span> Booking &amp; Cancellation</a></li>
 </ul>
 </aside>
 <!-- Accordion Sections -->
-<div class="lg:col-span-9 space-y-20">
+<div class="lg:col-span-9 space-y-24">
 <!-- Planning Your Trip -->
 <div class="scroll-mt-32" id="planning">
-<div class="flex items-center gap-4 mb-8">
-<span class="material-symbols-outlined text-secondary text-3xl">explore</span>
+<div class="flex items-center gap-4 mb-10">
+<span class="material-symbols-outlined text-turquoise text-3xl">explore</span>
 <h2 class="font-headline-md text-headline-md text-primary">Planning Your Trip</h2>
 </div>
 <div class="space-y-0 border-t border-outline-variant">
 <!-- Question 1 -->
 <div class="accordion-item border-b border-outline-variant group">
-<button class="w-full py-6 flex justify-between items-center text-left focus:outline-none" onclick="toggleAccordion(this)">
-<span class="font-body-lg text-body-lg font-semibold text-on-surface group-hover:text-secondary transition-colors">What is the best time of year to visit Tunisia?</span>
-<span class="material-symbols-outlined chevron transition-transform duration-300 text-secondary">expand_more</span>
+<button class="w-full py-8 flex justify-between items-center text-left focus:outline-none" onclick="toggleAccordion(this)">
+<span class="font-headline-sm text-xl text-on-surface group-hover:text-turquoise transition-colors">What is the best time of year to visit Tunisia?</span>
+<span class="material-symbols-outlined chevron transition-transform duration-300 text-turquoise">expand_more</span>
 </button>
 <div class="accordion-content">
 <p class="text-on-surface-variant font-body-md leading-relaxed pr-12">
-                                        The ideal windows for Tunisian exploration are Spring (March to May) and Autumn (September to November). During these periods, the Mediterranean breeze is gentle, and the Sahara temperatures are comfortable for both daytime treks and evening stargazing. Summer offers vibrant coastal life, while Winter is perfect for those seeking the quiet solitude of the desert dunes.
-                                    </p>
+                                    The ideal windows for Tunisian exploration are Spring (March to May) and Autumn (September to November). During these periods, the Mediterranean breeze is gentle, and the Sahara temperatures are comfortable for both daytime treks and evening stargazing. Summer offers vibrant coastal life, while Winter is perfect for those seeking the quiet solitude of the desert dunes.
+                                </p>
 </div>
 </div>
 <!-- Question 2 -->
 <div class="accordion-item border-b border-outline-variant group">
-<button class="w-full py-6 flex justify-between items-center text-left focus:outline-none" onclick="toggleAccordion(this)">
-<span class="font-body-lg text-body-lg font-semibold text-on-surface group-hover:text-secondary transition-colors">Do I need a visa for my voyage?</span>
-<span class="material-symbols-outlined chevron transition-transform duration-300 text-secondary">expand_more</span>
+<button class="w-full py-8 flex justify-between items-center text-left focus:outline-none" onclick="toggleAccordion(this)">
+<span class="font-headline-sm text-xl text-on-surface group-hover:text-turquoise transition-colors">Do I need a visa for my voyage?</span>
+<span class="material-symbols-outlined chevron transition-transform duration-300 text-turquoise">expand_more</span>
 </button>
 <div class="accordion-content">
 <p class="text-on-surface-variant font-body-md leading-relaxed pr-12">
-                                        Visa requirements vary by nationality. Many Western nations enjoy visa-free entry for up to 90 days. We recommend checking with the nearest Tunisian consulate 6-8 weeks prior to departure. Asikel Voyages provides comprehensive documentation support for all our guests to ensure a smooth entry process.
-                                    </p>
+                                    Visa requirements vary by nationality. Many Western nations enjoy visa-free entry for up to 90 days. We recommend checking with the nearest Tunisian consulate 6-8 weeks prior to departure. Asikel Voyages provides comprehensive documentation support for all our guests to ensure a smooth entry process.
+                                </p>
 </div>
 </div>
 </div>
 </div>
 <!-- Accommodations & Transport -->
 <div class="scroll-mt-32" id="accommodation">
-<div class="flex items-center gap-4 mb-8">
-<span class="material-symbols-outlined text-secondary text-3xl">card_travel</span>
-<h2 class="font-headline-md text-headline-md text-primary">Accommodations & Transport</h2>
+<div class="flex items-center gap-4 mb-10">
+<span class="material-symbols-outlined text-turquoise text-3xl">card_travel</span>
+<h2 class="font-headline-md text-headline-md text-primary">Accommodations &amp; Transport</h2>
 </div>
 <div class="space-y-0 border-t border-outline-variant">
 <div class="accordion-item border-b border-outline-variant group">
-<button class="w-full py-6 flex justify-between items-center text-left focus:outline-none" onclick="toggleAccordion(this)">
-<span class="font-body-lg text-body-lg font-semibold text-on-surface group-hover:text-secondary transition-colors">What can I expect from the "Luxury Camps" experience?</span>
-<span class="material-symbols-outlined chevron transition-transform duration-300 text-secondary">expand_more</span>
+<button class="w-full py-8 flex justify-between items-center text-left focus:outline-none" onclick="toggleAccordion(this)">
+<span class="font-headline-sm text-xl text-on-surface group-hover:text-turquoise transition-colors">What can I expect from the "Luxury Camps" experience?</span>
+<span class="material-symbols-outlined chevron transition-transform duration-300 text-turquoise">expand_more</span>
 </button>
 <div class="accordion-content">
 <p class="text-on-surface-variant font-body-md leading-relaxed pr-12">
-                                        Our signature Saharan camps redefine "glamping." You will reside in handcrafted Berber tents equipped with plush bedding, private en-suite facilities, and authentic local decor. Each evening features curated gourmet dining under the stars, accompanied by traditional music and the unparalleled silence of the desert.
-                                    </p>
+                                    Our signature Saharan camps redefine "glamping." You will reside in handcrafted Berber tents equipped with plush bedding, private en-suite facilities, and authentic local decor. Each evening features curated gourmet dining under the stars, accompanied by traditional music and the unparalleled silence of the desert.
+                                </p>
 </div>
 </div>
 <div class="accordion-item border-b border-outline-variant group">
-<button class="w-full py-6 flex justify-between items-center text-left focus:outline-none" onclick="toggleAccordion(this)">
-<span class="font-body-lg text-body-lg font-semibold text-on-surface group-hover:text-secondary transition-colors">How will I travel between destinations?</span>
-<span class="material-symbols-outlined chevron transition-transform duration-300 text-secondary">expand_more</span>
+<button class="w-full py-8 flex justify-between items-center text-left focus:outline-none" onclick="toggleAccordion(this)">
+<span class="font-headline-sm text-xl text-on-surface group-hover:text-turquoise transition-colors">How will I travel between destinations?</span>
+<span class="material-symbols-outlined chevron transition-transform duration-300 text-turquoise">expand_more</span>
 </button>
 <div class="accordion-content">
 <p class="text-on-surface-variant font-body-md leading-relaxed pr-12">
-                                        All internal transport is managed via private, climate-controlled luxury SUVs (4x4) driven by our expert local guides. For specific segments, we also offer traditional camel caravans or private chartered regional flights to maximize your time spent exploring rather than commuting.
-                                    </p>
+                                    All internal transport is managed via private, climate-controlled luxury SUVs (4x4) driven by our expert local guides. For specific segments, we also offer traditional camel caravans or private chartered regional flights to maximize your time spent exploring rather than commuting.
+                                </p>
 </div>
 </div>
 </div>
 </div>
 <!-- Sustainability & Ethics -->
 <div class="scroll-mt-32" id="sustainability">
-<div class="flex items-center gap-4 mb-8">
-<span class="material-symbols-outlined text-secondary text-3xl">eco</span>
-<h2 class="font-headline-md text-headline-md text-primary">Sustainability & Ethics</h2>
+<div class="flex items-center gap-4 mb-10">
+<span class="material-symbols-outlined text-turquoise text-3xl">eco</span>
+<h2 class="font-headline-md text-headline-md text-primary">Sustainability &amp; Ethics</h2>
 </div>
 <div class="space-y-0 border-t border-outline-variant">
 <div class="accordion-item border-b border-outline-variant group">
-<button class="w-full py-6 flex justify-between items-center text-left focus:outline-none" onclick="toggleAccordion(this)">
-<span class="font-body-lg text-body-lg font-semibold text-on-surface group-hover:text-secondary transition-colors">What is your plastic-free policy?</span>
-<span class="material-symbols-outlined chevron transition-transform duration-300 text-secondary">expand_more</span>
+<button class="w-full py-8 flex justify-between items-center text-left focus:outline-none" onclick="toggleAccordion(this)">
+<span class="font-headline-sm text-xl text-on-surface group-hover:text-turquoise transition-colors">What is your plastic-free policy?</span>
+<span class="material-symbols-outlined chevron transition-transform duration-300 text-turquoise">expand_more</span>
 </button>
 <div class="accordion-content">
 <p class="text-on-surface-variant font-body-md leading-relaxed pr-12">
-                                        Asikel Voyages is committed to a zero-single-use-plastic goal. Guests are provided with high-quality, insulated copper water flasks upon arrival, with filtered water stations available in all vehicles and camps. We strictly avoid pre-packaged items and work with local artisans who use traditional, biodegradable materials.
-                                    </p>
+                                    Asikel Voyages is committed to a zero-single-use-plastic goal. Guests are provided with high-quality, insulated copper water flasks upon arrival, with filtered water stations available in all vehicles and camps. We strictly avoid pre-packaged items and work with local artisans who use traditional, biodegradable materials.
+                                </p>
 </div>
 </div>
 <div class="accordion-item border-b border-outline-variant group">
-<button class="w-full py-6 flex justify-between items-center text-left focus:outline-none" onclick="toggleAccordion(this)">
-<span class="font-body-lg text-body-lg font-semibold text-on-surface group-hover:text-secondary transition-colors">How does my trip impact the local community?</span>
-<span class="material-symbols-outlined chevron transition-transform duration-300 text-secondary">expand_more</span>
+<button class="w-full py-8 flex justify-between items-center text-left focus:outline-none" onclick="toggleAccordion(this)">
+<span class="font-headline-sm text-xl text-on-surface group-hover:text-turquoise transition-colors">How does my trip impact the local community?</span>
+<span class="material-symbols-outlined chevron transition-transform duration-300 text-turquoise">expand_more</span>
 </button>
 <div class="accordion-content">
 <p class="text-on-surface-variant font-body-md leading-relaxed pr-12">
-                                        We operate on a "Community First" model. Over 80% of our supply chain—from guides to produce suppliers—is local. A portion of every booking fee goes directly into the Asikel Heritage Fund, which supports the restoration of ancient Berber granaries and funds education initiatives in remote Saharan villages.
-                                    </p>
+                                    We operate on a "Community First" model. Over 80% of our supply chain—from guides to produce suppliers—is local. A portion of every booking fee goes directly into the Asikel Heritage Fund, which supports the restoration of ancient Berber granaries and funds education initiatives in remote Saharan villages.
+                                </p>
 </div>
 </div>
 </div>
 </div>
 <!-- Booking & Cancellation -->
 <div class="scroll-mt-32" id="booking">
-<div class="flex items-center gap-4 mb-8">
-<span class="material-symbols-outlined text-secondary text-3xl">event_available</span>
-<h2 class="font-headline-md text-headline-md text-primary">Booking & Cancellation</h2>
+<div class="flex items-center gap-4 mb-10">
+<span class="material-symbols-outlined text-turquoise text-3xl">event_available</span>
+<h2 class="font-headline-md text-headline-md text-primary">Booking &amp; Cancellation</h2>
 </div>
 <div class="space-y-0 border-t border-outline-variant">
 <div class="accordion-item border-b border-outline-variant group">
-<button class="w-full py-6 flex justify-between items-center text-left focus:outline-none" onclick="toggleAccordion(this)">
-<span class="font-body-lg text-body-lg font-semibold text-on-surface group-hover:text-secondary transition-colors">What is your cancellation policy?</span>
-<span class="material-symbols-outlined chevron transition-transform duration-300 text-secondary">expand_more</span>
+<button class="w-full py-8 flex justify-between items-center text-left focus:outline-none" onclick="toggleAccordion(this)">
+<span class="font-headline-sm text-xl text-on-surface group-hover:text-turquoise transition-colors">What is your cancellation policy?</span>
+<span class="material-symbols-outlined chevron transition-transform duration-300 text-turquoise">expand_more</span>
 </button>
 <div class="accordion-content">
 <p class="text-on-surface-variant font-body-md leading-relaxed pr-12">
-                                        We offer flexible cancellation terms. Cancellations made more than 60 days before departure receive a full refund minus a small administrative fee. For closer dates, we provide credit for future voyages or a partial refund. We highly recommend comprehensive travel insurance for all our guests.
-                                    </p>
-</div>
-</div>
-<div class="accordion-item border-b border-outline-variant group">
-<button class="w-full py-6 flex justify-between items-center text-left focus:outline-none" onclick="toggleAccordion(this)">
-<span class="font-body-lg text-body-lg font-semibold text-on-surface group-hover:text-secondary transition-colors">Can I customize a pre-designed tour package?</span>
-<span class="material-symbols-outlined chevron transition-transform duration-300 text-secondary">expand_more</span>
-</button>
-<div class="accordion-content">
-<p class="text-on-surface-variant font-body-md leading-relaxed pr-12">
-                                        Absolutely. While our curated packages are designed for a balanced experience, we specialize in bespoke tailoring. Whether you wish to extend your stay in Carthage or add a private pottery workshop in Guellala, our travel designers will craft your itinerary to your exact specifications.
-                                    </p>
+                                    We offer flexible cancellation terms. Cancellations made more than 60 days before departure receive a full refund minus a small administrative fee. For closer dates, we provide credit for future voyages or a partial refund. We highly recommend comprehensive travel insurance for all our guests.
+                                </p>
 </div>
 </div>
 </div>
@@ -302,86 +297,91 @@
 </div>
 </div>
 </section>
-<!-- CTA Section -->
+<!-- Travel Essentials Section (Matching Home/Contact styling) -->
 <section class="py-24 bg-primary text-white overflow-hidden relative">
 <div class="absolute inset-0 opacity-10 pointer-events-none heritage-pattern"></div>
 <div class="max-w-3xl mx-auto px-margin-mobile text-center relative z-10">
-<div class="inline-block px-4 py-1 border border-secondary text-secondary-fixed font-label-md text-label-md mb-8">BEYOND THE FAQ</div>
-<h2 class="font-headline-lg text-headline-lg mb-6">Still have questions?</h2>
-<p class="font-body-lg text-body-lg text-on-primary-container mb-12">
-                    Our travel curators are ready to help you plan every detail of your Tunisian odyssey. Schedule a private consultation or reach out to us directly.
-                </p>
+<div class="inline-block px-4 py-1 border border-turquoise text-turquoise font-label-md text-[10px] tracking-[0.2em] mb-10 uppercase">Beyond the FAQ</div>
+<h2 class="font-headline-lg text-5xl mb-8">Still have questions?</h2>
+<p class="font-body-lg text-lg text-white/70 mb-12 leading-relaxed">
+                Our travel curators are ready to help you plan every detail of your Tunisian odyssey. Schedule a private consultation or reach out to us directly.
+            </p>
 <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
-<button class="bg-secondary text-white font-label-md text-label-md px-10 py-4 rounded transition-all hover:brightness-110 transform hover:scale-95 duration-200 w-full sm:w-auto">
-                        Book a Consultation
-                    </button>
-<button class="border border-white/30 text-white font-label-md text-label-md px-10 py-4 rounded transition-all hover:bg-white/10 transform hover:scale-95 duration-200 w-full sm:w-auto">
-                        Contact Us
-                    </button>
 </div>
 </div>
 </section>
 </main>
 <!-- Footer -->
-<footer class="w-full py-12 bg-primary dark:bg-tertiary-container border-t border-secondary-container/10">
-<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop max-w-container-max mx-auto gap-gutter">
-<div class="flex flex-col items-center md:items-start gap-4">
-<div class="font-headline-sm text-headline-sm text-secondary-fixed uppercase tracking-tighter">ASIKEL VOYAGES</div>
-<p class="font-body-md text-body-md text-on-primary-container opacity-80">© 2024 Asikel Voyages. Crafting Timeless Tunisian Journeys.</p>
+<footer class="bg-primary text-white w-full py-16 border-t border-accent-turquoise/20">
+<div class="flex flex-col md:flex-row justify-between items-start px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-12">
+<div class="space-y-6">
+<a href="Home.html" class="flex items-center gap-4 hover:opacity-90 transition-opacity duration-300">
+<img alt="ASIKEL VOYAGES" class="h-10 md:h-14" src="c:\Users\lassed\Downloads\Capture_d_écran_2026-07-10_112415-removebg-preview.png"/>
+</a>
+<p class="max-w-xs font-body-md text-body-md text-white/60">
+                Crafting Timeless Tunisian Journeys since 2004. Member of the Tunisian Federation of Travel Agencies.
+            </p>
+<div class="flex gap-6">
+<a class="material-symbols-outlined hover:text-accent-turquoise transition-colors" href="#">public</a>
+<a class="material-symbols-outlined hover:text-accent-turquoise transition-colors" href="#">share</a>
+<a class="material-symbols-outlined hover:text-accent-turquoise transition-colors" href="#">mail</a>
 </div>
-<div class="flex flex-wrap justify-center gap-gutter">
-
+</div>
+<div class="grid grid-cols-2 gap-x-20 gap-y-4">
+<a class="text-white/60 font-label-md text-label-md hover:text-accent-turquoise transition-colors duration-300" href="Privacy.html">Privacy Policy</a>
+<a class="text-white/60 font-label-md text-label-md hover:text-accent-turquoise transition-colors duration-300" href="Services.html">Terms of Service</a>
+<a class="text-white/60 font-label-md text-label-md hover:text-accent-turquoise transition-colors duration-300" href="Sustainability.html">Sustainability</a>
+<a class="text-white/60 font-label-md text-label-md hover:text-accent-turquoise transition-colors duration-300" href="Press.html">Press Kit</a>
+</div>
+<div class="space-y-4 w-full md:w-auto">
+<h6 class="font-label-md text-xs uppercase tracking-widest text-accent-turquoise">Newsletter</h6>
+<div class="flex border-b border-accent-turquoise/30 pb-2">
+<input class="bg-transparent border-none focus:ring-0 text-white placeholder:text-white/30 w-full" placeholder="Your email" type="email"/>
+<button class="material-symbols-outlined text-accent-turquoise hover:translate-x-1 transition-transform">east</button>
 </div>
 </div>
-<div class="mt-12 text-center">
-<div class="flex justify-center gap-6 text-secondary-fixed opacity-60">
-<ul class="space-y-4">
-<li><a class="text-on-primary-container font-label-md hover:text-white transition-colors" href="#">Destinations</a></li>
-<li><a class="text-on-primary-container font-label-md hover:text-white transition-colors" href="#">Luxury Tours</a></li>
-<li><a class="text-on-primary-container font-label-md hover:text-white transition-colors" href="faq.html">FAQ</a></li>
-<li><a class="text-on-primary-container font-label-md hover:text-white transition-colors" href="#">Press Kit</a></li>
-</ul>
 </div>
-<div>
-<h5 class="text-white font-label-md mb-6">Legal</h5>
-<ul class="space-y-4">
-<li><a class="text-on-primary-container font-label-md hover:text-white transition-colors" href="#">Privacy Policy</a></li>
-<li><a class="text-on-primary-container font-label-md hover:text-white transition-colors" href="#">Terms of Service</a></li>
-<li><a class="text-on-primary-container font-label-md hover:text-white transition-colors" href="#">Cookies</a></li>
-</ul>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-label-md text-xs text-white/40">© 2026 Asikel Voyages. Crafting Timeless Tunisian Journeys.</p>
+<div class="flex gap-4">
+<div class="w-10 h-6 bg-white/5 rounded-sm border border-white/10"></div>
+<div class="w-10 h-6 bg-white/5 rounded-sm border border-white/10"></div>
+<div class="w-10 h-6 bg-white/5 rounded-sm border border-white/10"></div>
 </div>
 </div>
 </footer>
 <script>
-        function toggleAccordion(button) {
-            const item = button.parentElement;
-            const isOpen = item.classList.contains('active');
-            
-            // Close all other items
-            document.querySelectorAll('.accordion-item').forEach(el => {
-                el.classList.remove('active');
-            });
-
-            // If it wasn't open, open it
-            if (!isOpen) {
-                item.classList.add('active');
-            }
-        }
-
-        // Smooth scroll adjustment for category nav
-        document.querySelectorAll('aside a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 120,
-                        behavior: 'smooth'
-                    });
-                }
-            });
+    function toggleAccordion(button) {
+        const item = button.parentElement;
+        const isOpen = item.classList.contains('active');
+        
+        
+        document.querySelectorAll('.accordion-item').forEach(el => {
+            el.classList.remove('active');
         });
-    </script>
+
+        
+        if (!isOpen) {
+            item.classList.add('active');
+        }
+    }
+
+    
+    document.querySelectorAll('aside a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 120,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
+
+
 </body></html>
